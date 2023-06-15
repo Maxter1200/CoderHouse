@@ -1,0 +1,791 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importar fuente de archivo */
+@font-face {
+    font-family: Rubik;
+    src: url(../fonts/Rubik/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: Rubik Medium;
+    src: url(../fonts/Rubik/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url(../fonts/Righteous.ttf);
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    padding: 25px;
+
+    width: 100%;
+    height: 150px;
+
+    background-color: #101114;
+}
+
+a{
+    text-decoration: none;
+}
+
+header a{
+    color: #fcfcfc;
+}
+
+main{
+    padding: 200px 50px;
+    
+    background-color: #090A0B;
+}
+
+footer{
+    width: 100%;
+
+    padding: 50px;
+
+    background-color: #101114;
+}
+
+hr{
+    margin: 75px 50px;
+    
+
+    border: 3px solid #101114;
+    border-radius: 5px;
+    color: #101114;
+}
+
+.logo{
+    width: 300px;
+    height: 100px;
+}
+
+.search{
+    width: 675px;
+    height: 50px;
+
+    padding: 5px;
+
+    background-color: #5B6171;
+    border-radius: 10px;
+
+    color: #fcfcfc;
+    font-family: Rubik;
+    font-size: 20px;
+
+    list-style: inside url(../res/icon/search.png);
+}
+
+.cart{
+    margin-left: 50px;
+
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+    font-size: 20px;
+
+    list-style: inside url(../res/icon/shop.png);
+}
+
+.profile{
+    margin-left: 50px;
+
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+    font-size: 20px;
+
+    list-style: inside url(../res/icon/profile.png);
+}
+
+.topPage{
+    display: flex;
+    justify-content: center;
+}
+
+.botPage{
+    display: flex;
+    justify-content: center;
+}
+
+.featured, .bestSellers, .gameList, .filters, .gallery, .description, .cartList, .login{
+
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+.featuredGame{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    width: 700px;
+}
+
+.portrait{
+    width: 225px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+.featured .portrait{
+    width: 700px;
+    height: 425px;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 20px;
+
+    margin-left: 25px;
+}
+
+.featured .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0px;
+    padding: 20px;
+
+    height: 75px;
+    font-size: 24px;
+
+    background-color: #101114;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.noOff{
+    color: #5B6171;
+    font-family: Rubik;
+    text-decoration: line-through;
+}
+
+.priceBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 15px;
+    padding: 10px;
+
+    height: 45px;
+
+    background-color: #5B6171;
+    border-radius: 10px;
+}
+
+.addButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 10px;
+
+    padding: 7px;
+
+    width: 100px;
+
+    background-color: #725AC1;
+    border-radius: 10px;
+    border: none;
+}
+
+.bestSellers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 50px;
+}
+
+.game{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 25px;
+
+    width: 800px;
+    height: 145px;
+
+    background-color: #101114;
+    border-radius: 10px;
+}
+
+.bestSellers .game{
+    width: 585px;
+    height: 145px;
+}
+
+.categories{
+    font-family: Rubik;
+    color: #5B6171;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.bestSellers .priceBox{
+    height: 40px;
+}
+
+.bestSellers .addButton{
+    height: 30px;
+}
+
+.gameList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 1000px;
+}
+
+.gameList .price{
+    width: 500px;
+}
+
+.gameList .priceBox{
+    height: 40px;
+}
+
+.gameList .addButton{
+    width: 150px;
+    height: 30px;
+}
+
+.addButton p{
+    margin-left: 5px;
+
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+    font-size: 16px;
+}
+
+
+.off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 50px;
+
+    width: 100px;
+    height: 40px;
+
+    border-radius: 10px;
+    background-color: #725AC1;
+
+    font-size: 24px;
+}
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 615px;
+}
+
+.filters p{
+    font-size: 32px;
+    font-family: Rubik;
+}
+
+.sliderBar{
+    width: 365px;
+}
+
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #5B6171;
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #725AC1;
+    border: #fcfcfc solid 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #725AC1;
+    border: #fcfcfc solid 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.filterCategories{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 320px;
+
+    background-color: #101114;
+    border-radius: 15px;
+}
+
+.filterCategories ul{
+    margin: 40px;
+    list-style: inside url(../res/icon/checkBox.png);
+}
+
+.filterCategories li{
+    margin: 25px 0 25px 0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: #101114;
+}
+  
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    margin: 25px;
+}
+   
+::-webkit-scrollbar-thumb{
+    background: #5B6171; 
+    border-radius: 10px;
+}
+
+.footerElements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    color: #5B6171;
+    font-family: Montserrat;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.footerElements h1{
+    color: #5B6171;
+    font-family: Righteous;
+    font-size: 40px;
+}
+
+.author{
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 220px;
+    height: 75px;
+}
+
+.contact h2{
+    font-size: 24px;
+}
+
+.icons{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disclaimer{
+    display: flex;
+    justify-content: center;
+
+    color: #5B6171;
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-top: 100px;
+}
+.disclaimer p{
+    width: 90%;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 700px;
+    height: 580px;
+}
+
+.gallery .portrait{
+    width: 700px;
+    height: 425px;
+}
+
+.selector{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    width: 700px;
+}
+
+.selector img{
+    margin: 0 10px;
+
+    width: 128px;
+    height: 72px;
+
+    border-radius: 5px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-left: 50px;
+    margin-top: 60px;
+    padding: 50px;
+
+    width: 600px;
+
+    background-color: #101114;
+    border-radius: 15px;
+}
+
+.description h3{
+    font-size: 32px;
+    font-family: Rubik;
+    font-weight: normal;
+}
+
+.description h4{
+    font-size: 28px;
+    font-family: Rubik;
+    font-weight: normal;
+}
+
+.description p{
+    font-size: 28px;
+    color: #5B6171;
+    font-family: Rubik;
+    font-weight: normal;
+}
+
+.descText{
+    overflow-y: scroll;
+
+    height: 135px;
+}
+
+.descText p{
+    color: #5B6171;
+    font-family: Rubik;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.developer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 500px;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 500px;
+}
+
+.description .categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    overflow-x: scroll;
+    
+    width: 500px;
+}
+
+.description .categories p{
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 30px;
+    background-color: #090A0B;
+}
+
+.blank{
+    margin: 75px 0px 75px 750px;
+}
+
+.blank .price{
+    justify-content: space-between;
+
+    padding: 35px;
+
+    width: 600px;
+
+    font-family: Rubik Medium;
+    font-size: 28px;
+    color: #fcfcfc;
+    background-color: #101114;
+    border-radius: 15px;
+}
+
+.blank .priceBox{
+    background-color: #101114;
+    padding: 0px;
+}
+
+.blank .addButton{
+    width: 125px;
+    height: 50px;
+}
+
+.blank .addButton p{
+    font-size: 18px;
+}
+
+.blank .off{
+    font-size: 32px;
+
+    width: 125px;
+    height: 50px;
+}
+
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    height: 825px;
+}
+
+
+
+.cartList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;    
+
+    padding: 50px;
+
+    width: 900px;
+    height: 750px;
+
+    background-color: #101114;
+    border-radius: 15px;
+}
+
+.cartList h3{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    height: 62px;
+}
+
+.cartList .game{
+    background-color: #5B6171;
+}
+
+.cartList .price{
+    justify-content: space-between;
+    width: 500px;
+}
+
+.cartList .priceBox{
+    justify-content: center;
+    width: 150px;
+
+    background-color: #725AC1;
+}
+
+.cartGames{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    overflow-y: scroll;
+
+    height: 485px;
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    width: 125px;
+    height: 45px;
+
+    background-color: #101114;
+    border-radius: 10px;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 800px;
+}
+
+.buy{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 800px;
+}
+
+.buyButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+
+    background-color: #725AC1;
+    border-radius: 10px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    width: 600px;
+    height: 600px;
+
+    padding: 35px 50px;
+
+    background-color: #101114;
+    border-radius: 15px;
+}
+
+.loginInput{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0px 15px;
+
+    font-size: 24px;
+}
+
+.loginInput input{
+    height: 50px;
+
+    margin: 10px 0;
+
+    padding: 5px;
+
+    font-size: 20px;
+    color: #fcfcfc;
+    background-color: #090A0B;
+    border: 1px solid #5B6171;
+    border-radius: 5px;
+}
+
+.login #btLogin{
+
+    margin: 0px 15px;
+
+    height: 100px;
+
+    font-family: Rubik Medium;
+    font-size: 28px;
+    color: #fcfcfc;
+    background-color: #725AC1;
+    border-radius: 20px;
+}
+
+.login p{
+    font-size: 20px;
+    font-family: Rubik;
+    font-weight: normal;
+
+    text-align: center;
+}
+
+.login a{
+    color: #fcfcfc;
+    text-decoration: underline;
+}
+
+.signup{
+    width: 600px;
+    height: 750px;
+}
+
+.signupCheck{
+    text-align: center;
+    font-size: 18px;
+    font-family: Rubik;
+    font-weight: normal;
+}
