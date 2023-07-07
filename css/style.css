@@ -3,63 +3,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
 }
 
 /* Importar fuente de archivo */
 @font-face {
     font-family: Rubik;
-    src: url(../fonts/Rubik/Rubik-Regular.ttf);
+    src: url(../res/fonts/Rubik/Rubik-Regular.ttf);
 }
 
 @font-face {
     font-family: Rubik Medium;
-    src: url(../fonts/Rubik/Rubik-Medium.ttf);
+    src: url(../res/fonts/Rubik/Rubik-Medium.ttf);
 }
 
 @font-face {
     font-family: Montserrat;
-    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+    src: url(../res/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
 @font-face {
     font-family: Righteous;
-    src: url(../fonts/Righteous.ttf);
+    src: url(../res/fonts/Righteous.ttf);
 }
 
-h1{
-    font-size: 48px;
-    font-weight: 500;
-    color: #fcfcfc;
-    font-family: Rubik Medium;
-}
+/* UNIVERSAL */
 
-h2{
-    font-size: 40px;
-    font-weight: 500;
-    color: #fcfcfc;
-    font-family: Rubik Medium;
-}
-
-h3{
-    font-size: 24px;
-    font-weight: 500;
-    color: #fcfcfc;
-    font-family: Rubik Medium;
-}
-
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-
-    padding: 25px;
-
-    width: 100%;
-    height: 150px;
-
-    background-color: #101114;
+p{
+    margin: 0;
 }
 
 a{
@@ -70,8 +42,49 @@ header a{
     color: #fcfcfc;
 }
 
+h1{
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+h2{
+    margin: 0;
+
+    font-size: 40px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+h3{
+    margin: 0;
+    
+    font-size: 20px;
+    font-weight: 500;
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+}
+
+/*  ESTRUCTURA */
+
+header{
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    background-color: #101114;
+}
+
 main{
-    padding: 200px 50px;
+    padding: 150px 0;
     
     background-color: #090A0B;
 }
@@ -79,96 +92,155 @@ main{
 footer{
     width: 100%;
 
-    padding: 50px;
+    padding: 50px 100px;
 
     background-color: #101114;
 }
 
-hr{
-    margin: 75px 50px;
-    
+/* HEADER */
 
-    border: 3px solid #101114;
-    border-radius: 5px;
-    color: #101114;
+.menu{
+    margin: 0;
+
+    color: #fcfcfc;
+    font-family: Rubik Medium;
+    font-size: 20px;
+
+    list-style: none;
 }
 
 .logo{
-    width: 300px;
-    height: 100px;
+    height: 50px;
 }
 
 .search{
-    width: 675px;
+    width: auto;
     height: 50px;
 
-    padding: 5px;
+    padding: 10px;
 
     background-color: #5B6171;
     border-radius: 10px;
+}
+
+.searchBox{
+    margin-left: 5px;
+
+    width: calc(100% - 35px);
+    background-color: #5B6171;
+    border: none;
+    outline: none;
 
     color: #fcfcfc;
     font-family: Rubik;
-    font-size: 20px;
-
-    list-style: inside url(../res/icon/search.png);
+    font-weight: normal;
+    font-size: 18px;
 }
 
-.cart{
-    margin-left: 50px;
-
+.searchBox::placeholder{
     color: #fcfcfc;
-    font-family: Rubik Medium;
-    font-size: 20px;
-
-    list-style: inside url(../res/icon/shop.png);
 }
 
-.profile{
-    margin-left: 50px;
-
-    color: #fcfcfc;
-    font-family: Rubik Medium;
-    font-size: 20px;
-
-    list-style: inside url(../res/icon/profile.png);
-}
-
-.topPage{
+.cart a{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.botPage{
+.cart a img{
+    position: relative;
+    top: -2px;
+
+    margin-right: 12px;
+
+    height: 40px;
+}
+
+.cart a p{
+    margin: 0;
+}
+
+.profile a{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.featured, .bestSellers, .gameList, .filters, .gallery, .description, .cartList, .login{
+.profile a img{
+    margin-right: 12px;
 
-    color: #fcfcfc;
-    font-family: Rubik Medium;
+    height: 38px;
 }
 
-.featuredGame{
+.profile a p{
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .logo{
+        content: url("../res/icon/icon_2.png");
+    }
+    
+    .cart a p{
+        display: none;
+    }
+
+    .cart a img{
+        margin: 0;
+    }
+    
+    .profile a p{
+        display: none;
+    }
+
+    .profile a img{
+        margin: 0;
+    }
+
+    .searchBox::placeholder{
+        color: #5B6171;
+    }
+}
+
+/* PAGINA INDEX */
+
+.featured .game{
     display: flex;
     flex-direction: column;
+    justify-content: none;
+    align-items: center;
+
     margin-top: 18px;
-    width: 700px;
+
+    padding: 0;
+
+    height: 90%;
 }
 
 .portrait{
-    width: 225px;
-    height: 125px;
+    padding: 0;
+
+    height: auto;
+
     border-radius: 10px;
 }
 
 .featured .portrait{
-    width: 700px;
-    height: 425px;
-    border-radius: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 100%;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.game{
+    display: flex;
+
+    margin: 1.5% 0;
+
+    padding: 2.5%;
+
+    width: 100%;
+
+    background-color: #101114;
+    border-radius: 10px;
 }
 
 .info{
@@ -176,28 +248,25 @@ hr{
     flex-direction: column;
     justify-content: space-between;
 
-    font-size: 20px;
+    padding-left: 5%;
 
-    margin-left: 25px;
+    font-size: 20px;
 }
 
 .featured .info{
-    display: flex;
     flex-direction: row;
+    justify-content: none;
     align-items: center;
 
-    margin: 0px;
-    padding: 20px;
+    width: 100%;
 
-    height: 75px;
-    font-size: 24px;
-
-    background-color: #101114;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 2.5%;
 }
 
 .noOff{
+    margin: 0;
+    padding: 0;
+
     color: #5B6171;
     font-family: Rubik;
     text-decoration: line-through;
@@ -205,13 +274,10 @@ hr{
 
 .priceBox{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
-    margin-left: 15px;
-    padding: 10px;
-
-    height: 45px;
+    padding: 2% 3%;
 
     background-color: #5B6171;
     border-radius: 10px;
@@ -222,60 +288,59 @@ hr{
     align-items: center;
     justify-content: center;
 
-    margin-left: 10px;
-
-    padding: 7px;
-
-    width: 100px;
+    padding: 2% 20%;
 
     background-color: #725AC1;
     border-radius: 10px;
-    border: none;
 }
 
-.bestSellers{
+.bestGames{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    margin-left: 50px;
-}
+    margin-top: 18px;
+    margin-bottom: auto;
 
-.game{
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px 25px;
-
-    width: 800px;
-    height: 145px;
-
-    background-color: #101114;
-    border-radius: 10px;
-}
-
-.bestSellers .game{
-    width: 585px;
-    height: 145px;
+    height: 90%;
 }
 
 .categories{
     font-family: Rubik;
+    font-size: 18px;
     color: #5B6171;
 }
 
 .price{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 300px;
+
+    padding: 0;
 }
 
-.bestSellers .priceBox{
-    height: 40px;
+.split{
+    margin: 75px 0;
+    
+    border: 3px solid #101114;
+    border-radius: 5px;
+    color: #101114;
+    opacity: 1;
 }
 
-.bestSellers .addButton{
-    height: 30px;
+.splitVertical{
+    display: flex;
+    flex-direction: column;
+
+    width: 0;
+
+    margin: 0 auto;
+
+    padding: 0;
+    
+    border: 3px solid #101114;
+    border-radius: 5px;
+    color: #101114;
+    opacity: 1;
 }
 
 .gameList{
@@ -283,20 +348,31 @@ hr{
     flex-direction: column;
     justify-content: space-between;
 
-    height: 1000px;
+    margin-top: 18px;
+
+    height: 100%;
 }
 
-.gameList .price{
-    width: 500px;
+.platforms{
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    padding: 5% 1.5%;
+    
+    width: auto;
+
+    background-color: #5B6171;
+    border-radius: 10px;
 }
 
-.gameList .priceBox{
-    height: 40px;
+.platforms .fa-brands{
+    margin: 0 0.5rem;
 }
 
 .gameList .addButton{
-    width: 150px;
-    height: 30px;
+    padding: 2% 7.5%;
 }
 
 .addButton p{
@@ -307,21 +383,47 @@ hr{
     font-size: 16px;
 }
 
-
 .off{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    margin-right: 50px;
+    padding: 1.25%;
+    
+    width: auto;
 
-    width: 100px;
-    height: 40px;
-
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #725AC1;
 
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.gameList .noOff{
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+    .gameList .addButton{
+        padding: 2% 20%;
+    }
+
+    .addButton p{
+        display: none;
+    }
+
+    .splitVertical{
+        display: none;
+    }
+
+    .filters, .filters h2, .filters p, .filters .sliderBar, .filters .catContainer {
+        display: none;
+
+        max-height: 0;
+    }
+
+    .gamePage .addButton{
+        padding: 5% 20% !important;
+    }
 }
 
 .filters{
@@ -329,23 +431,39 @@ hr{
     flex-direction: column;
     justify-content: space-between;
 
-    height: 615px;
+    height: 650px;
 }
 
 .filters p{
-    font-size: 32px;
+    font-size: 28px;
     font-family: Rubik;
 }
 
+datalist {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+datalist option{
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: normal;
+}
+
 .sliderBar{
-    width: 365px;
+    background-color: #101114;
+    border-radius: 10px;
+
+    padding: 15px 25px;
 }
 
 .slider{
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 10px;
+    height: 7.5px;
     background: #5B6171;
     border-radius: 5px;
 }
@@ -353,41 +471,67 @@ hr{
 .slider::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background: #725AC1;
-    border: #fcfcfc solid 5px;
+    border: #fcfcfc solid 4px;
     border-radius: 50px;
     cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+.slider::-moz-range-thumb{
+    -moz-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
     background: #725AC1;
-    border: #fcfcfc solid 5px;
+    border: #fcfcfc solid 4px;
     border-radius: 50px;
     cursor: pointer;
 }
 
-.filterCategories{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    overflow-y: scroll;
-    height: 320px;
+.catContainer{
+
+    height: 55%;
+
+    padding: 25px 50px;
 
     background-color: #101114;
     border-radius: 15px;
 }
 
-.filterCategories ul{
-    margin: 40px;
-    list-style: inside url(../res/icon/checkBox.png);
+.filterCategories{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+
+    padding-left: 50px;
+
+    overflow-y: scroll;
 }
 
-.filterCategories li{
-    margin: 25px 0 25px 0;
+.checkBox{
+    margin: 10px 0 10px 0;
+
+    font-family: Rubik;
+    font-size: 20px;
+}
+
+.checkBox input{
+    border: 3.5px solid #5B6171;
+    border-radius: 5px;
+
+    background-color: #090A0B;
+    box-shadow: none;
+}
+
+.checkBox input:checked{
+    border: none;
+    border-radius: 5px;
+
+    background-color: #725AC1;
+    box-shadow: none;
 }
 
 ::-webkit-scrollbar{
@@ -395,98 +539,42 @@ hr{
     height: 10px;
     background-color: #101114;
 }
-  
+
 ::-webkit-scrollbar-track{
     border-radius: 10px;
     margin: 25px;
 }
-   
+
 ::-webkit-scrollbar-thumb{
     background: #5B6171; 
     border-radius: 10px;
 }
 
-.footerElements{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    color: #5B6171;
-    font-family: Montserrat;
-}
-
-.brand{
-    display: flex;
-    align-items: center;
-}
-
-.footerElements h1{
-    color: #5B6171;
-    font-family: Righteous;
-    font-size: 40px;
-}
-
-.author{
-    margin-left: 10px;
-    font-size: 16px;
-}
-
-.contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 220px;
-    height: 75px;
-}
-
-.contact h2{
-    font-size: 24px;
-}
-
-.icons{
-    width: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.disclaimer{
-    display: flex;
-    justify-content: center;
-
-    color: #5B6171;
-    font-family: Montserrat;
-    font-size: 16px;
-    margin-top: 100px;
-}
-.disclaimer p{
-    width: 90%;
-}
+/* PAGINA JUEGO */
 
 .gallery{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 700px;
-    height: 580px;
+    
+    height: 100%;
+
+    margin-top: 18px;
 }
 
 .gallery .portrait{
-    width: 700px;
-    height: 425px;
+    height: auto;
+
+    margin-bottom: 10px;
 }
 
 .selector{
     display: flex;
-    justify-content: space-between;
     overflow-x: scroll;
-    width: 700px;
+    overflow-y: none;
 }
 
 .selector img{
-    margin: 0 10px;
+    margin: 10px;
 
     width: 128px;
     height: 72px;
@@ -500,30 +588,32 @@ hr{
     justify-content: space-between;
     align-items: flex-start;
 
-    margin-left: 50px;
-    margin-top: 60px;
-    padding: 50px;
 
-    width: 600px;
+    margin-top: 18px;
+
+    padding: 10%;
+
+    height: 85%;
+
 
     background-color: #101114;
     border-radius: 15px;
 }
 
 .description h3{
-    font-size: 32px;
+    font-size: 28px;
     font-family: Rubik;
     font-weight: normal;
 }
 
 .description h4{
-    font-size: 28px;
+    font-size: 24px;
     font-family: Rubik;
     font-weight: normal;
 }
 
 .description p{
-    font-size: 28px;
+    font-size: 24px;
     color: #5B6171;
     font-family: Rubik;
     font-weight: normal;
@@ -532,13 +622,13 @@ hr{
 .descText{
     overflow-y: scroll;
 
-    height: 135px;
+    height: 30%;
 }
 
 .descText p{
     color: #5B6171;
     font-family: Rubik;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -547,7 +637,7 @@ hr{
     align-items: center;
     justify-content: space-between;
 
-    width: 500px;
+    width: 100%;
 }
 
 .date{
@@ -555,133 +645,148 @@ hr{
     align-items: center;
     justify-content: space-between;
 
-    width: 500px;
+    width: 100%;
 }
 
 .description .categories{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    overflow-x: scroll;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
     
-    width: 500px;
+    width: 100%;
 }
 
 .description .categories p{
+
+    margin: 10px;
+    margin-top: 0;
+
     padding: 10px 20px;
-    font-size: 24px;
+
+    font-size: 20px;
     border-radius: 30px;
     background-color: #090A0B;
 }
 
-.blank{
-    margin: 75px 0px 75px 750px;
+.description .categories p:first-child{
+    margin-left: auto;
 }
 
-.blank .price{
+.description .categories p:last-child{
+    margin-right: auto;
+}
+
+.gamePage .price{
     justify-content: space-between;
 
-    padding: 35px;
-
-    width: 600px;
+    padding: 2%;
 
     font-family: Rubik Medium;
-    font-size: 28px;
+    font-size: 24px;
     color: #fcfcfc;
     background-color: #101114;
     border-radius: 15px;
 }
 
-.blank .priceBox{
+.gamePage .priceBox{
     background-color: #101114;
     padding: 0px;
 }
 
-.blank .addButton{
-    width: 125px;
-    height: 50px;
+.gamePage .addButton{
+    padding: 5%;
 }
 
-.blank .addButton p{
+.gamePage .addButton p{
     font-size: 18px;
 }
 
-.blank .off{
+.gamePage .off{
     font-size: 32px;
-
-    width: 125px;
-    height: 50px;
 }
 
-.cartContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+.gamePage .noOff{
+    width: auto;
 
-    height: 825px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
+/* PAGINA CARRITO */
 
 .cartList{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;    
+    
+    width: 100%;
+    height: 100%;
 
-    padding: 50px;
+    margin-top: 24px;
 
-    width: 900px;
-    height: 750px;
+    padding: 5%;
 
     background-color: #101114;
     border-radius: 15px;
 }
 
-.cartList h3{
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    height: 62px;
-}
-
-.cartList .game{
-    background-color: #5B6171;
-}
-
-.cartList .price{
-    justify-content: space-between;
-    width: 500px;
-}
-
-.cartList .priceBox{
-    justify-content: center;
-    width: 150px;
-
-    background-color: #725AC1;
-}
-
 .cartGames{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 
     overflow-y: scroll;
 
-    height: 485px;
+    width: 100%;
+
+    height: 60%;
 }
+
+.cartGames .game{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #5B6171;
+
+    width: 95%;
+
+    margin: 15px auto;
+}
+
+.cartGames .game:first-child{
+    margin-top: auto;
+}
+
+.cartGames .game:last-child{
+    margin-bottom: auto;
+}
+
+.cartGames .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+.cartGames h3{
+    font-size: 24px;
+}
+
+.cartList .priceBox{
+    justify-content: center;
+
+    background-color: #725AC1;
+}
+
 
 .delete{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 5px;
-
-    width: 125px;
-    height: 45px;
+    padding: 1.5%;
 
     background-color: #101114;
     border-radius: 10px;
@@ -692,7 +797,7 @@ hr{
     align-items: center;
     justify-content: space-between;
 
-    width: 800px;
+    width: 100%;
 }
 
 .buy{
@@ -700,7 +805,8 @@ hr{
     align-items: center;
     justify-content: space-between;
 
-    width: 800px;
+    width: 100%;
+    height: 15%;
 }
 
 .buyButton{
@@ -708,11 +814,17 @@ hr{
     justify-content: center;
     align-items: center;
 
-    width: 200px;
+    padding: 2.5% 5%;
 
     background-color: #725AC1;
     border-radius: 10px;
 }
+
+.buyButton h3{
+    font-size: 32px;
+}
+
+/* PAGINA LOGIN */
 
 .login{
     display: flex;
@@ -720,10 +832,10 @@ hr{
     justify-content: space-between;
     align-items: stretch;
 
-    width: 600px;
     height: 600px;
 
-    padding: 35px 50px;
+    padding: 5% 7.5%;
+
 
     background-color: #101114;
     border-radius: 15px;
@@ -733,19 +845,22 @@ hr{
     display: flex;
     flex-direction: column;
 
-    margin: 0px 15px;
+    margin: 0px 1.5%;
 
     font-size: 24px;
 }
 
 .loginInput input{
-    height: 50px;
+    height: auto;
 
-    margin: 10px 0;
+    margin: 2.5% 0;
 
     padding: 5px;
 
     font-size: 20px;
+    font-family: Rubik;
+    font-weight: normal;
+
     color: #fcfcfc;
     background-color: #090A0B;
     border: 1px solid #5B6171;
@@ -754,13 +869,14 @@ hr{
 
 .login #btLogin{
 
-    margin: 0px 15px;
+    margin: 0 2%;
 
-    height: 100px;
+    padding: 5% 0;
 
     font-family: Rubik Medium;
     font-size: 28px;
     color: #fcfcfc;
+
     background-color: #725AC1;
     border-radius: 20px;
 }
@@ -773,19 +889,98 @@ hr{
     text-align: center;
 }
 
-.login a{
+.login a, .signup .checkBox a{
     color: #fcfcfc;
     text-decoration: underline;
 }
 
+/* PAGINA SIGNUP */
+
 .signup{
-    width: 600px;
-    height: 750px;
+    height: 700px;
 }
 
-.signupCheck{
-    text-align: center;
+.signup .checkBox{
+    display: flex;
+    justify-content: center;
+
     font-size: 18px;
     font-family: Rubik;
     font-weight: normal;
+}
+
+.signup .checkBox input{
+    margin-right: 15px;
+
+    width: 20px;
+    height: 20px;
+}
+
+/* FOOTER */
+
+.watermark{
+    display: flex;
+    align-items: center;
+}
+
+.brand{
+    color: #5B6171;
+    font-family: Righteous;
+}
+
+.author{
+    margin-left: 15px;
+    font-size: 16px;
+
+    color: #5B6171;
+    font-family: Montserrat;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-left: 20%;
+
+    height: 75px;
+}
+
+.contact h2{
+    font-size: 24px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+.icons img{
+    margin: 5px;
+}
+
+.disclaimer{
+    display: flex;
+    justify-content: center;
+
+    
+    margin-top: 125px;
+}
+
+.disclaimer p, .disclaimer u{
+    width: 100%;
+
+    color: #5B6171;
+    font-family: Montserrat;
+    font-size: 16px;
+
+    text-align: justify;
 }

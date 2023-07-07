@@ -3,290 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/jpg" href="res/icon/icon.png"/>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/626b2508df.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZENITH - Inicio</title>
+    <title>Inicio - ZENITH</title>
 </head>
 <body>
     <!-- Cabecera de la Página -->
     <header>
-        <!-- Logo de la Página -->
-        <a href="index.html"><img src="res/icon/logo.png" alt="Logo" class="logo"></a>
-        <!-- Barra de Búsqueda -->
-        <div class="search">
-            <ul>
-                <li>Buscar</li>
+        <!-- Menú de Navegación -->
+        <nav class="container">
+            <ul class="menu row">
+                <li class="col-2"><a href="index.html"><img src="res/icon/logo.png" alt="Logo" class="logo"></a></li> <!-- Inicio/Logo -->
+                <span class="col-1"></span> <!-- Espaciado -->
+                <!-- Barra de Busqueda -->
+                <li class="col-4"> 
+                    <form class="search">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                        <input class="searchBox" type="text" id="searchBar" placeholder="Buscar">
+                    </form> 
+                </li>
+                <span class="col-1"></span> <!-- Espaciado -->
+                <li class="cart col-2"><a href="pages/carrito.html"><img src="res/icon/shop.png" alt="Carrito"><p>Carrito</p></a></li> <!-- Carrito de Compras -->
+                <li class="profile col-2"><a href="pages/login.html"><img src="res/icon/profile.png" alt="Perfil"><p>Perfil</p></a></li> <!-- Perfil de Usuario -->
             </ul>
-        </div>
-        <!-- Carrito de Compra -->
-        <div class="cart">
-            <ul>
-                <a href="pages/carrito.html"><li>Carrito</li></a>
-            </ul>
-        </div>
-        <!-- Perfil de Usuario -->
-        <div class="profile">
-            <ul>
-                <a href="pages/login.html"><li>Perfil</li></a>
-            </ul>
-        </div>
+        </nav>
     </header>
 
     <!-- Contenido de la Página -->
     <main>
-        <article class="topPage">
-            <!-- Sección de Destacados -->
-            <section class="featured">
-                <h1>Destacados</h1>
-                <div class="featuredGame">
-                    <!-- Portada de Juego -->
-                    <a href="pages/juego.html"><img src="res/img/gta.jpg" alt="Portada GTA V" class="portrait"></a>
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Grand Theft Auto V</h3>
-                        <!-- Precio del Juego sin Descuento -->
-                        <p class="noOff">50 US$</p>
-                        <!-- Precio del Juego y Botón de Añadir -->
-                        <div class="priceBox">
-                            <p>25 US$</p>
-                            <a href="pages/carrito.html" class="addButton">
-                                <img src="res/icon/cartAdd.png" alt="Añadir">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Sección de Juegos Más Vendidos -->
-            <aside class="bestSellers">
-                <h1>Más vendidos</h1>
-                <section class="game">
-                    <!-- Portada de Juego -->
-                    <img src="res/img/cyber.jpg" alt="Portada Cyberpunk" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Cyberpunk 2077</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Acción - Mundo Abierto</p>
-                        <div class="price">
-                            <!-- Precio del Juego sin Descuento -->
-                            <p class="noOff">50 US$</p>
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
+        <div class="container">
+            <section class="row d-flex flex-xl-row align-items-xl-start flex-lg-column justify-content-lg-between align-items-lg-center">
+                <!-- Sección de Destacados -->
+                <article class="featured col-xl-6 col-lg-9 mb-xl-auto mb-lg-5">
+                    <h2>Destacados</h2>
+                    <div class="game container-fluid">
+                        <!-- Portada de Juego -->
+                        <a class="row m-0" href="pages/juego.html"><img class="portrait col-12" src="res/img/gta.jpg" alt="Portada"></a>
+                        <div class="info row">
+                            <!-- Título del Juego -->
+                            <h3 class="col-5">Grand Theft Auto V</h3>
+                            <!-- Precio -->
+                            <p class="noOff col-3">50 US$</p>
+                            <div class="priceBox col-4">
                                 <p>25 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
+                                <a class="addButton" href="pages/carrito.html">
                                     <img src="res/icon/cartAdd.png" alt="Añadir">
                                 </a>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="game">
-                    <!-- Portada de Juego -->
-                    <img src="res/img/redead.jpg" alt="Portada Red" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Red Dead Redemption 2</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Acción - Mundo Abierto</p>
-                        <div class="price">
-                            <!-- Precio del Juego sin Descuento -->
-                            <p class="noOff">60 US$</p>
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>20 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                </a>
+                </article>
+                <!-- Sección de Juegos Más Vendidos -->
+                <aside class="bestSellers col-xl-6 col-lg-9 mb-xl-0 mb-lg-5">
+                    <h2>Más vendidos</h2>
+                    <section class="bestGames">
+                        <article class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/cyber.jpg" alt="Portada">
+                            <div class="info col-8">
+                                <!-- Título del Juego -->
+                                <h3>Cyberpunk 2077</h3>
+                                <!-- Categorias -->
+                                <p class="categories">Acción - Mundo Abierto</p>
+                                <!-- Precio -->
+                                <div class="price container">
+                                    <p class="noOff col-4">50 US$</p>
+                                    <div class="priceBox col-8">
+                                        <p>25 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="game">
-                    <!-- Portada de Juego -->
-                    <img src="res/img/fifa.jpg" alt="Portada FIFA" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>FIFA 23</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Deporte - Simulación</p>
-                        <div class="price">
-                            <!-- Precio del Juego sin Descuento -->
-                            <p class="noOff">70 US$</p>
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>21 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                </a>
+                        </article>
+                        <article class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/redead.jpg" alt="Portada">
+                            <div class="info col-8">
+                                <!-- Título del Juego -->
+                                <h3>Red Dead Redemption 2</h3>
+                                <!-- Categorias -->
+                                <p class="categories">Acción - Mundo Abierto</p>
+                                <!-- Precio -->
+                                <div class="price container">
+                                    <p class="noOff col-4">60 US$</p>
+                                    <div class="priceBox col-8">
+                                        <p>20 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-            </aside>
-        </article>
-        <hr>
-        <article class="botPage">
-            <section class="gameList">
-                <h1>Lista de lanzamientos</h1>
-                <div class="game">
-                    <img src="res/img/streetfi.jpg" alt="Portada Street" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Street Fighter 6</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Acción - Lucha</p>
-                        <div class="price">
-                            <div class="priceBox">
-                                <p>60 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                    <p>Agregar</p>
-                                </a>
+                        </article>
+                        <article class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/fifa.jpg" alt="Portada">
+                            <div class="info col-8">
+                                <!-- Título del Juego -->
+                                <h3>FIFA 23</h3>
+                                <!-- Categorias -->
+                                <p class="categories">Deporte - Simulación</p>
+                                <!-- Precio -->
+                                <div class="price container">
+                                    <p class="noOff col-4">70 US$</p>
+                                    <div class="priceBox col-8">
+                                        <p>21 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game">
-                    <img src="res/img/elder.jpg" alt="Portada Street" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>The Elder Scrolls Online</h3>
-                        <!-- Categorias -->
-                        <p class="categories">MMORPG - Mundo Abierto</p>
-                        <div class="price">
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>20 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                    <p>Agregar</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game">
-                    <img src="res/img/watch.jpg" alt="Portada Watch" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Watch Dogs 2</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Acción - Mundo Abierto</p>
-                        <div class="price">
-                            <!-- Porcentaje de Descuento -->
-                            <div class="off">
-                                <p>-85%</p>
-                            </div>
-                            <!-- Precio del Juego sin Descuento -->
-                            <p class="noOff">60 US$</p>
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>7,5 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                    <p>Agregar</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game">
-                    <img src="res/img/outlast.jpg" alt="Portada Outlast" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Outlast</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Supervivencia - Terror</p>
-                        <div class="price">
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>20 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                    <p>Agregar</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game">
-                    <img src="res/img/dying.jpg" alt="Portada Dying" class="portrait">
-                    <div class="info">
-                        <!-- Título del Juego -->
-                        <h3>Dying Light 2</h3>
-                        <!-- Categorias -->
-                        <p class="categories">Zombis - Mundo Abierto</p>
-                        <div class="price">
-                            <!-- Porcentaje de Descuento -->
-                            <div class="off">
-                                <p>-50%</p>
-                            </div>
-                            <!-- Precio del Juego sin Descuento -->
-                            <p class="noOff">60 US$</p>
-                            <!-- Precio del Juego y Botón de Añadir -->
-                            <div class="priceBox">
-                                <p>30 US$</p>
-                                <a href="pages/carrito.html" class="addButton">
-                                    <img src="res/icon/cartAdd.png" alt="Añadir">
-                                    <p>Agregar</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </article>
+                    </section>
+                </aside>
             </section>
-            <hr>
-            <aside class="filters">
-                <h1>Filtros</h1>
-                <p>Precio</p>
-                <div class="sliderBar">
-                    <input type="range" min="0" max="200" value="100" class="slider">
-                </div>
-                <p>Género</p>
-                <div class="filterCategories">
-                    <ul>
-                        <li>Acción</li>
-                        <li>Aventura</li>
-                        <li>Lucha</li>
-                        <li>Mundo Abierto</li>
-                        <li>Supervivencia</li>
-                        <li>MMORPG</li>
-                        <li>Plataformas</li>
-                        <li>Terror
-                        <li>Zombis</li>
-                        <li>Shooter</li>
-                        <li>Puzzles</li>
-                    </ul>
-                </div>
-            </aside>
-        </article>
+            <hr class="split row"> <!-- Separador -->
+            <section class="row d-flex justify-content-center">
+                <!-- Sección de Lista de Juegos -->
+                <article class="col-xl-7 col-lg-9">
+                    <h2>Lista de lanzamientos</h2>
+                    <div class="gameList">
+                        <div class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/streetfi.jpg" alt="Portada">
+                            <div class="info col-8 container-fluid">
+                                <!-- Cabecera del Juego -->
+                                <div class="row">
+                                    <!-- Titulo del Juego -->
+                                    <h3 class="col-7 p-0 m-0">Street Fighter 6</h3>
+                                    <!-- Plataformas -->
+                                    <div class="platforms col-5">
+                                        <i class="fa-brands fa-windows fa-lg" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                <!-- Categorias -->
+                                <p class="categories row">Acción - Lucha</p>
+                                <!-- Precio -->
+                                <div class="price row">
+                                    <span class="col-3"></span>
+                                    <span class="col-2"></span>
+                                    <div class="priceBox col-7">
+                                        <p>60 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                            <p>Agregar</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/elder.jpg" alt="Portada">
+                            <div class="info col-8 container-fluid">
+                                <!-- Cabecera del Juego -->
+                                <div class="row">
+                                    <!-- Titulo del Juego -->
+                                    <h3 class="col-7 p-0 m-0">The Elder Scrolls</h3>
+                                    <!-- Plataformas -->
+                                    <div class="platforms col-5">
+                                        <i class="fa-brands fa-windows fa-lg" style="color: #ffffff;"></i>
+                                        <i class="fa-brands fa-apple fa-lg" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                <!-- Categorias -->
+                                <p class="categories row">MMORPG - Mundo Abierto</p>
+                                <!-- Precio -->
+                                <div class="price row">
+                                    <span class="col-3"></span>
+                                    <span class="col-2"></span>
+                                    <div class="priceBox col-7">
+                                        <p>20 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                            <p>Agregar</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/watch.jpg" alt="Portada">
+                            <div class="info col-8 container-fluid">
+                                <!-- Cabecera del Juego -->
+                                <div class="row">
+                                    <!-- Titulo del Juego -->
+                                    <h3 class="col-7 p-0 m-0">Watch Dogs 2</h3>
+                                    <!-- Plataformas -->
+                                    <div class="platforms col-5">
+                                        <i class="fa-brands fa-windows fa-lg" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                <!-- Categorias -->
+                                <p class="categories row">Acción - Mundo Abierto</p>
+                                <!-- Precio -->
+                                <div class="price row">
+                                    <p class="off col-3">-85%</p>
+                                    <p class="noOff col-2">60 US$</p>
+                                    <div class="priceBox col-7">
+                                        <p>7,5 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                            <p>Agregar</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/outlast.jpg" alt="Portada">
+                            <div class="info col-8 container-fluid">
+                                <!-- Cabecera del Juego -->
+                                <div class="row">
+                                    <!-- Titulo del Juego -->
+                                    <h3 class="col-7 p-0 m-0">Outlast</h3>
+                                    <!-- Plataformas -->
+                                    <div class="platforms col-5">
+                                        <i class="fa-brands fa-windows fa-lg" style="color: #ffffff;"></i>
+                                        <i class="fa-brands fa-apple fa-lg" style="color: #ffffff;"></i>
+                                        <i class="fa-brands fa-linux fa-lg" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                <!-- Categorias -->
+                                <p class="categories row">Supervivencia - Terror</p>
+                                <!-- Precio -->
+                                <div class="price row">
+                                    <span class="col-3"></span>
+                                    <span class="col-2"></span>
+                                    <div class="priceBox col-7">
+                                        <p>20 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                            <p>Agregar</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game container">
+                            <!-- Portada de Juego -->
+                            <img class="portrait col-4" src="res/img/dying.jpg" alt="Portada">
+                            <div class="info col-8 container-fluid">
+                                <!-- Cabecera del Juego -->
+                                <div class="row">
+                                    <!-- Titulo del Juego -->
+                                    <h3 class="col-7 p-0 m-0">Dying Light 2</h3>
+                                    <!-- Plataformas -->
+                                    <div class="platforms col-5">
+                                        <i class="fa-brands fa-windows fa-lg" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                <!-- Categorias -->
+                                <p class="categories row">Zombis - Mundo Abierto</p>
+                                <!-- Precio -->
+                                <div class="price row">
+                                    <p class="off col-3">-50%</p>
+                                    <p class="noOff col-2">60 US$</p>
+                                    <div class="priceBox col-7">
+                                        <p>30 US$</p>
+                                        <a href="pages/carrito.html" class="addButton">
+                                            <img src="res/icon/cartAdd.png" alt="Añadir">
+                                            <p>Agregar</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <hr class="splitVertical col-1"> <!-- Separador Vertical -->
+                <!-- Seccion de Filtros -->
+                <aside class="filters col-xl-4">
+                    <h2>Filtros</h2>
+                    <!-- Filtro de Precio mediante Slider -->
+                    <p>Precio</p>
+                    <div class="sliderBar">
+                        <input type="range" list="marks" value="60" class="slider">
+                        <datalist id="tickmarks">
+                            <option value="0" label="$0"></option>
+                            <option value="20" label="$20"></option>
+                            <option value="40" label="$40"></option>
+                            <option value="60" label="$60"></option>
+                            <option value="80" label="$80"></option>
+                            <option value="100" label="$100"></option>
+                        </datalist>
+                    </div>
+                    <!-- Filtro de Categorias mediante Checkboxs -->
+                    <p>Género</p>
+                    <section class="catContainer">
+                        <div class="filterCategories form-check">
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Acción</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Aventura</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Mundo Abierto</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Supervivencia</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">MMORPG</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Plataformas</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Terror</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Zombis</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Shooter</div>
+                            <div class="checkBox"><input class="form-check-input" type="checkbox">Puzzles</div>
+                        </div>
+                    </section>
+                </aside>
+            </article>
+        </div>
     </main>
     
     <!-- Pie de Página -->
     <footer>
-        <nav class="footerElements">
-            <!-- Marca de Agua -->
-            <div class="brand">
-                <h1>ZENITH</h1>
-                <p class="author">Diseñado por Matías Vivas</p>
-            </div>
-            <!-- Formas y Redes de contacto -->
-            <div class="contact">
-                <h2>Contacto</h2>
-                <div class="icons">
-                    <img src="res/icon/facebook.png" alt="Facebook">
-                    <img src="res/icon/instagram.png" alt="Instagram">
-                    <img src="res/icon/twitter.png" alt="Twitter">
-                    <img src="res/icon/email.png" alt="Email">
-                    <img src="res/icon/phone.png" alt="Telefono">
+        <section class="container">
+            <article class="row">
+                <!-- Marca -->
+                <div class="watermark col-6">
+                    <h2 class="brand">ZENITH</h2>
+                    <p class="author">Diseñado por Matías Vivas</p>
                 </div>
-            </div>
-        </nav>
-        <!-- Aclaración -->
-        <div class="disclaimer">
-            <p><u>Disclaimer</u>: ZENITH es una marca ficticia de distribución videojuegos y no tiene ningún tipo de sitio web oficial, esto solo es un prototipo de sitio web que se podría adaptar a algún comercio de venta de videojuegos. Este sitio web no cuenta con la funcionalidad de compra de videojuegos, las funcionalidades mostradas en el sitio solo son ilustrativas y no hay ninguna forma de poder adquirir un videojuego mediante la compra de este por medio del sitio web. Los precios mostrados en el sitio web no son reales, solo están puestos para mostrar las capacidades del sitio.</p>
-        </div>
+                <span class="col-1"></span>
+                <!-- Formas y Redes de contacto -->
+                <div class="contact col-5">
+                    <h2>Contacto</h2>
+                    <div class="icons">
+                        <img src="res/icon/facebook.png" alt="Facebook">
+                        <img src="res/icon/instagram.png" alt="Instagram">
+                        <img src="res/icon/twitter.png" alt="Twitter">
+                        <img src="res/icon/email.png" alt="Email">
+                        <img src="res/icon/phone.png" alt="Telefono">
+                    </div>
+                </div>
+            </article>
+            <article class="row">
+                <!-- Aclaración -->
+                <div class="disclaimer col-12">
+                    <p><u>Disclaimer</u>: ZENITH es una marca ficticia de distribución videojuegos y no tiene ningún tipo de sitio web oficial, esto solo es un prototipo de sitio web que se podría adaptar a algún comercio de venta de videojuegos. Este sitio web no cuenta con la funcionalidad de compra de videojuegos, las funcionalidades mostradas en el sitio solo son ilustrativas y no hay ninguna forma de poder adquirir un videojuego mediante la compra de este por medio del sitio web. Los precios mostrados en el sitio web no son reales, solo están puestos para mostrar las capacidades del sitio.</p>
+                </div>
+            </article>
+        </section>
     </footer>
 
 </body>
