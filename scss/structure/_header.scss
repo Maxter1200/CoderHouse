@@ -1,0 +1,104 @@
+.menu{
+    margin: 0;
+
+    color: $color-white;
+    font-family: Rubik Medium;
+    font-size: 20px;
+
+    list-style: none;
+}
+
+.logo{
+    height: 50px;
+}
+
+.search{
+    width: auto;
+    height: 50px;
+
+    padding: 10px;
+
+    background-color: $color-secondary;
+    border-radius: 10px;
+}
+
+.searchBox{
+    margin-left: 5px;
+
+    width: calc(100% - 35px);
+    background-color: $color-secondary;
+    border: none;
+    outline: none;
+
+    color: $color-white;
+    font-family: Rubik;
+    font-weight: normal;
+    font-size: 18px;
+
+    &::placeholder{
+        color: $color-white;
+    }
+}
+
+.cart{
+    a{
+        display: flex;
+        align-items: center;
+
+        img{
+            position: relative;
+            top: -2px;
+        
+            margin-right: 12px;
+        
+            height: 40px;
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.profile{
+    a{
+        display: flex;
+        align-items: center;
+
+        img{
+            margin-right: 12px;
+        
+            height: 38px;
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .logo{
+        content: url("../res/icon/icon_2.png");
+    }
+    
+    .cart a p{
+        display: none;
+    }
+
+    .cart a img{
+        margin: 0;
+    }
+    
+    .profile a p{
+        display: none;
+    }
+
+    .profile a img{
+        margin: 0;
+    }
+
+    .searchBox::placeholder{
+        color: $color-secondary;
+    }
+}

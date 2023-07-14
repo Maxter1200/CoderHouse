@@ -1,0 +1,332 @@
+.game{
+    display: flex;
+
+    margin: 1.5% 0;
+
+    padding: 2.5%;
+
+    width: 100%;
+
+    background-color: $color-bg-secondary;
+    border-radius: 10px;
+}
+
+.portrait{
+    padding: 0;
+
+    height: auto;
+
+    border-radius: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 5%;
+
+    font-size: 20px;
+}
+
+.platforms{
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    padding: 5% 1.5%;
+    
+    width: auto;
+
+    background-color: $color-secondary;
+    border-radius: 10px;
+
+    .fa-brands{
+        margin: 0 0.5rem;
+    }
+}
+
+.categories{
+    font-family: Rubik;
+    font-size: 18px;
+    color: $color-secondary;
+}
+
+.off{
+
+    padding: 1.25%;
+    
+    width: auto;
+
+    border-radius: 5px;
+    background-color: $color-primary;
+
+    font-size: 20px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+}
+
+.noOff{
+    margin: 0;
+    padding: 0;
+
+    color: $color-secondary;
+    font-family: Rubik;
+    text-decoration: line-through;
+}
+
+.priceBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2% 3%;
+
+    background-color: $color-secondary;
+    border-radius: 10px;
+}
+
+.addButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2% 20%;
+
+    background-color: $color-primary;
+    border-radius: 10px;
+
+    p{
+        margin-left: 5px;
+    
+        color: $color-white;
+        font-family: Rubik Medium;
+        font-size: 16px;
+    }
+}
+
+.featured{
+    .game{
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+    
+        margin-top: 18px;
+    
+        padding: 0;
+    
+        height: 90%;
+    }
+
+    .portrait{
+        width: 100%;
+    
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .info{
+        flex-direction: row;
+        justify-content: none;
+        align-items: center;
+    
+        width: 100%;
+    
+        padding: 2.5%;
+    }
+}
+
+.bestGames{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 18px;
+    margin-bottom: auto;
+
+    height: 90%;
+}
+
+.split{
+    margin: 75px 0;
+    
+    border: 3px solid $color-bg-secondary;
+    border-radius: 5px;
+    color: $color-bg-secondary;
+    opacity: 1;
+}
+
+.splitVertical{
+    display: flex;
+    flex-direction: column;
+
+    width: 0;
+
+    margin: 0 auto;
+
+    padding: 0;
+    
+    border: 3px solid $color-bg-secondary;
+    border-radius: 5px;
+    color: $color-bg-secondary;
+    opacity: 1;
+}
+
+.gameList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    height: 100%;
+
+    .addButton{
+        padding: 2% 7.5%;
+    }
+
+    .noOff{
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gameList .addButton{
+        padding: 2% 20%;
+    }
+
+    .gamePage .addButton{
+        padding: 5% 20% !important;
+    }
+
+    .addButton p{
+        display: none;
+    }
+
+    .splitVertical{
+        display: none;
+    }
+
+    .filters, .filters h2, .filters p, .filters .sliderBar, .filters .catContainer {
+        display: none;
+
+        max-height: 0;
+    }
+}
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 650px;
+    p{
+        font-size: 28px;
+        font-family: Rubik;
+    }
+}
+
+datalist {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    option{
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+.sliderBar{
+    background-color: $color-bg-secondary;
+    border-radius: 10px;
+
+    padding: 15px 25px;
+}
+
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7.5px;
+    background: $color-secondary;
+    border-radius: 5px;
+    
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        background: $color-primary;
+        border: $color-white solid 4px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    &::-moz-range-thumb{
+        -moz-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        background: $color-primary;
+        border: $color-white solid 4px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+}
+
+.catContainer{
+
+    height: 55%;
+
+    padding: 25px 50px;
+
+    background-color: $color-bg-secondary;
+    border-radius: 15px;
+}
+
+.filterCategories{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+
+    padding-left: 50px;
+
+    overflow-y: scroll;
+}
+
+.checkBox{
+    margin: 10px 0 10px 0;
+
+    font-family: Rubik;
+    font-size: 20px;
+
+    input{
+        border: 3.5px solid $color-secondary;
+        border-radius: 5px;
+    
+        background-color: $color-bg-primary;
+        box-shadow: none;
+
+        &:checked{
+            border: none;
+            border-radius: 5px;
+        
+            background-color: $color-primary;
+            box-shadow: none;
+        }
+    }
+}

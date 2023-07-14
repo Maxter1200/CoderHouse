@@ -1,0 +1,163 @@
+.gamePage{
+
+    .off{
+        font-size: 32px;
+    }
+
+    .price{
+        justify-content: space-between;
+    
+        padding: 2%;
+    
+        font-family: Rubik Medium;
+        font-size: 24px;
+        color: $color-white;
+        background-color: $color-bg-secondary;
+        border-radius: 15px;
+    }
+    
+    .noOff{
+        width: auto;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .priceBox{
+        background-color: $color-bg-secondary;
+        padding: 0px;
+    }
+
+    .addButton{
+        padding: 5%;
+        
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+
+    margin-top: 18px;
+
+    .portrait{
+        height: auto;
+    
+        margin-bottom: 10px;
+    }
+}
+
+.selector{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: none;
+
+    img{
+        margin: 10px;
+    
+        width: 128px;
+        height: 72px;
+    
+        border-radius: 5px;
+    }
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    margin-top: 18px;
+
+    padding: 10%;
+
+    height: 85%;
+
+
+    background-color: $color-bg-secondary;
+    border-radius: 15px;
+
+    h3{
+        font-size: 28px;
+        font-family: Rubik;
+        font-weight: normal;
+    }
+
+    h4{
+        font-size: 24px;
+        font-family: Rubik;
+        font-weight: normal;
+    }
+
+    p{
+        font-size: 24px;
+        color: $color-secondary;
+        font-family: Rubik;
+        font-weight: normal;
+    }
+
+    .categories{
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+        
+        width: 100%;
+
+        p{
+
+            margin: 10px;
+            margin-top: 0;
+        
+            padding: 10px 20px;
+        
+            font-size: 20px;
+            border-radius: 30px;
+            background-color: $color-bg-primary;
+
+            &:first-child{
+                margin-left: auto;
+            }
+
+            &:last-child{
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.descText{
+    overflow-y: scroll;
+
+    height: 30%;
+
+    p{
+        color: $color-secondary;
+        font-family: Rubik;
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+.developer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}

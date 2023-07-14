@@ -1,0 +1,66 @@
+.watermark{
+    display: flex;
+    align-items: center;
+}
+
+.brand{
+    color: $color-secondary;
+    font-family: Righteous;
+}
+
+.author{
+    margin-left: 15px;
+    font-size: 16px;
+
+    color: $color-secondary;
+    font-family: Montserrat;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-left: 20%;
+
+    height: 75px;
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    min-width: 100px;
+    max-width: 250px;
+
+    img{
+        margin: 5px;
+    }
+}
+
+.disclaimer{
+    display: flex;
+    justify-content: center;
+
+    
+    margin-top: 125px;
+
+    p, u{
+        width: 100%;
+    
+        color: $color-secondary;
+        font-family: Montserrat;
+        font-size: 16px;
+    
+        text-align: justify;
+    }
+}

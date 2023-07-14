@@ -1,0 +1,37 @@
+/* ---UNIVERSAL--- */
+
+/* VARIABLES */
+@import "universal/vars";
+
+/* FUENTES */
+@import "universal/fonts";
+
+/* COMPONENTES GENERALES */
+@import "universal/general";
+
+/* SCROLLBAR */
+@import "universal/scroll";
+
+/* ---ESTRUCTURA--- */
+@import "structure/structure";
+
+/* HEADER */
+@import "structure/header";
+
+/* PAGINA INDEX */
+@import "structure/main/index";
+
+/* PAGINA JUEGO */
+@import "structure/main/game";
+
+/* PAGINA CARRITO */
+@import "structure/main/cart";
+
+/* PAGINA LOGIN */
+@import "structure/main/login";
+
+/* PAGINA SIGNUP */
+@import "structure/main/signup";
+
+/* FOOTER */
+@import "structure/footer";
