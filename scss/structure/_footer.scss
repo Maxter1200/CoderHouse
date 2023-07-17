@@ -1,6 +1,5 @@
 .watermark{
-    display: flex;
-    align-items: center;
+    @include flex(row, start, center, nowrap);
 }
 
 .brand{
@@ -9,57 +8,46 @@
 }
 
 .author{
-    margin-left: 15px;
-    font-size: 16px;
+    margin-left: 1em;
 
     color: $color-secondary;
     font-family: Montserrat;
 }
 
 .contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include flex(col, between, start, nowrap);
 
     padding-left: 20%;
 
-    height: 75px;
+    height: 4em;
 
     h2{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
 .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    flex-wrap: wrap;
+    @include flex(row, between, center, wrap);
 
     width: 100%;
-    min-width: 100px;
-    max-width: 250px;
+    min-width: 6.25em;
+    max-width: 15.625em;
 
     img{
-        margin: 5px;
+        margin: 0.3em;
+        width: 2em;
+        height: 2em;
     }
 }
 
 .disclaimer{
-    display: flex;
-    justify-content: center;
+    @include flex(row, center, s, nowrap);
 
-    
-    margin-top: 125px;
+    margin-top: 7.8125em;
 
     p, u{
-        width: 100%;
-    
         color: $color-secondary;
         font-family: Montserrat;
-        font-size: 16px;
     
         text-align: justify;
     }

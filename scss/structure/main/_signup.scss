@@ -1,24 +1,23 @@
 .signup{
-    height: 700px;
+    height: 40em;
 
     .checkBox{
-        display: flex;
-        justify-content: center;
+        @include flex(row, center, none, nowrap);
     
-        font-size: 18px;
-        font-family: Rubik;
-        font-weight: normal;
+        p{
+            font-size: map-get($font-size, s);
+        }
 
         a{
-            color: $color-white;
             text-decoration: underline;
         }
 
         input{
-            margin-right: 15px;
+            margin: 0;
+            margin-right: .75em;
         
-            width: 20px;
-            height: 20px;
+            width: 1em;
+            height: 1em;
         }
     }
 }

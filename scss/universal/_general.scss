@@ -4,22 +4,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
     color: $color-white;
-    font-family: Rubik Medium;
+    font-family: Rubik;
 }
 
-p{
-    margin: 0;
+@media (min-width: 1440px){
+    html{
+        font-size: 115%;
+    }
 }
 
-a{
-    text-decoration: none;
+@media (max-width: 576px){
+    html{
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 415px){
+    html{
+        font-size: 60%;
+    }
 }
 
 h1{
     margin: 0;
 
-    font-size: 48px;
+    font-size: map-get($font-size, xxl);
     font-weight: 500;
     color: $color-white;
     font-family: Rubik Medium;
@@ -28,7 +39,7 @@ h1{
 h2{
     margin: 0;
 
-    font-size: 40px;
+    font-size: map-get($font-size, xl);
     font-weight: 500;
     color: $color-white;
     font-family: Rubik Medium;
@@ -37,8 +48,18 @@ h2{
 h3{
     margin: 0;
     
-    font-size: 20px;
+    font-size: map-get($font-size, m);
     font-weight: 500;
     color: $color-white;
     font-family: Rubik Medium;
+}
+
+p{
+    margin: 0;
+
+    font-size: map-get($font-size, s);
+}
+
+a{
+    text-decoration: none;
 }

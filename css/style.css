@@ -24,20 +24,27 @@
   padding: 0;
   box-sizing: border-box;
   color: #fcfcfc;
-  font-family: Rubik Medium;
+  font-family: Rubik;
 }
 
-p {
-  margin: 0;
+@media (min-width: 1440px) {
+  html {
+    font-size: 115%;
+  }
 }
-
-a {
-  text-decoration: none;
+@media (max-width: 576px) {
+  html {
+    font-size: 75%;
+  }
 }
-
+@media (max-width: 415px) {
+  html {
+    font-size: 60%;
+  }
+}
 h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 2.5rem;
   font-weight: 500;
   color: #fcfcfc;
   font-family: Rubik Medium;
@@ -45,7 +52,7 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 500;
   color: #fcfcfc;
   font-family: Rubik Medium;
@@ -53,10 +60,19 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #fcfcfc;
   font-family: Rubik Medium;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* SCROLLBAR */
@@ -78,9 +94,16 @@ h3 {
 header {
   position: fixed;
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
-  height: 100px;
+  height: 6.25em;
   background-color: #101114;
 }
 header a {
@@ -88,47 +111,48 @@ header a {
 }
 
 main {
-  padding: 150px 0;
+  padding: 7.8125em 0;
   background-color: #090A0B;
 }
 
 footer {
   width: 100%;
-  padding: 50px 100px;
+  padding: 5% 10%;
   background-color: #101114;
 }
 
 /* HEADER */
 .menu {
   margin: 0;
+  list-style: none;
+}
+.menu p {
   color: #fcfcfc;
   font-family: Rubik Medium;
-  font-size: 20px;
-  list-style: none;
+  font-size: 1.25rem !important;
 }
 
 .logo {
-  height: 50px;
+  height: 3.125em;
 }
 
 .search {
   width: auto;
-  height: 50px;
-  padding: 10px;
+  padding: 0.75em;
   background-color: #5B6171;
   border-radius: 10px;
 }
 
 .searchBox {
   margin-left: 5px;
-  width: calc(100% - 35px);
+  width: calc(100% - 2.5em);
   background-color: #5B6171;
   border: none;
   outline: none;
   color: #fcfcfc;
   font-family: Rubik;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1rem;
 }
 .searchBox::placeholder {
   color: #fcfcfc;
@@ -136,13 +160,20 @@ footer {
 
 .cart a {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
 }
 .cart a img {
   position: relative;
   top: -2px;
-  margin-right: 12px;
-  height: 40px;
+  margin-right: 0.75em;
+  height: 2.5em;
 }
 .cart a p {
   margin: 0;
@@ -150,11 +181,18 @@ footer {
 
 .profile a {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
 }
 .profile a img {
-  margin-right: 12px;
-  height: 38px;
+  margin-right: 0.75em;
+  height: calc(2.5em - 2px);
 }
 .profile a p {
   margin: 0;
@@ -164,27 +202,21 @@ footer {
   .logo {
     content: url("../res/icon/icon_2.png");
   }
-  .cart a p {
-    display: none;
-  }
-  .cart a img {
-    margin: 0;
-  }
-  .profile a p {
-    display: none;
-  }
-  .profile a img {
-    margin: 0;
-  }
   .searchBox::placeholder {
     color: #5B6171;
+  }
+  .menu p {
+    display: none;
+  }
+  .menu img {
+    margin: 0;
   }
 }
 /* PAGINA INDEX */
 .game {
   display: flex;
-  margin: 1.5% 0;
-  padding: 2.5%;
+  margin: 0.5em 0;
+  padding: 1em;
   width: 100%;
   background-color: #101114;
   border-radius: 10px;
@@ -198,42 +230,61 @@ footer {
 
 .info {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   padding-left: 5%;
-  font-size: 20px;
 }
 
 .platforms {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   margin-left: auto;
-  padding: 5% 1.5%;
+  padding: 0 0.3em;
   width: auto;
   background-color: #5B6171;
   border-radius: 10px;
 }
 .platforms .fa-brands {
-  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  margin: 0.85em 0.5em;
 }
 
 .categories {
-  font-family: Rubik;
-  font-size: 18px;
   color: #5B6171;
 }
 
 .off {
-  padding: 1.25%;
+  padding: 0.25em;
   width: auto;
   border-radius: 5px;
   background-color: #725AC1;
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: Rubik Medium;
+  font-weight: 500;
 }
 
 .price {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   padding: 0;
 }
 
@@ -241,40 +292,62 @@ footer {
   margin: 0;
   padding: 0;
   color: #5B6171;
-  font-family: Rubik;
   text-decoration: line-through;
 }
 
 .priceBox {
   display: flex;
-  justify-content: space-between;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: space-around;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
-  padding: 2% 3%;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  padding: 0.3em 0.5em;
   background-color: #5B6171;
   border-radius: 10px;
+}
+.priceBox p {
+  font-family: Rubik Medium;
+  font-weight: 500;
 }
 
 .addButton {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: center;
-  padding: 2% 20%;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  padding: 0.3em 20%;
   background-color: #725AC1;
   border-radius: 10px;
 }
+.addButton img {
+  height: 1.5em;
+}
 .addButton p {
-  margin-left: 5px;
-  color: #fcfcfc;
-  font-family: Rubik Medium;
-  font-size: 16px;
+  margin-left: 0.3em;
 }
 
+.featured {
+  margin-bottom: 3em;
+}
 .featured .game {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
-  justify-content: none;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
-  margin-top: 18px;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  margin-top: 1em;
   padding: 0;
   height: 90%;
 }
@@ -284,24 +357,37 @@ footer {
   border-bottom-right-radius: 0;
 }
 .featured .info {
+  display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: row;
-  justify-content: none;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
-  padding: 2.5%;
+  padding: 1em;
+}
+
+.bestSellers {
+  margin-bottom: 3em;
 }
 
 .bestGames {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
-  margin-top: 18px;
-  margin-bottom: auto;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  margin-top: 1em;
   height: 90%;
 }
 
 .split {
-  margin: 75px 0;
+  margin-bottom: 3em;
   border: 3px solid #101114;
   border-radius: 5px;
   color: #101114;
@@ -310,7 +396,12 @@ footer {
 
 .splitVertical {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 0;
   margin: 0 auto;
   padding: 0;
@@ -322,26 +413,27 @@ footer {
 
 .gameList {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
-  margin-top: 18px;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  margin-top: 1em;
   height: 100%;
 }
 .gameList .addButton {
-  padding: 2% 7.5%;
+  padding: 0.3em 1em;
 }
 .gameList .noOff {
   margin-left: auto;
   margin-right: auto;
-  font-size: 18px;
 }
 
 @media (max-width: 1200px) {
   .gameList .addButton {
-    padding: 2% 20%;
-  }
-  .gamePage .addButton {
-    padding: 5% 20% !important;
+    padding: 0.3em 20%;
   }
   .addButton p {
     display: none;
@@ -349,37 +441,53 @@ footer {
   .splitVertical {
     display: none;
   }
-  .filters, .filters h2, .filters p, .filters .sliderBar, .filters .catContainer {
+  .filters {
+    display: none;
+    max-height: 0;
+  }
+  .filters h2, .filters h3, .filters .sliderBar, .filters .catContainer {
     display: none;
     max-height: 0;
   }
 }
 .filters {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   height: 650px;
 }
-.filters p {
-  font-size: 28px;
+.filters h3 {
+  font-size: 1.5rem;
   font-family: Rubik;
+  font-weight: normal;
 }
 
 datalist {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   margin-top: 10px;
 }
 datalist option {
   font-family: Rubik;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
 }
 
 .sliderBar {
   background-color: #101114;
   border-radius: 10px;
-  padding: 15px 25px;
+  padding: 1em 1.5em;
 }
 
 .slider {
@@ -413,23 +521,28 @@ datalist option {
 
 .catContainer {
   height: 55%;
-  padding: 25px 50px;
+  padding: 1.5em 3em;
   background-color: #101114;
   border-radius: 15px;
 }
 
 .filterCategories {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   height: 100%;
-  padding-left: 50px;
+  padding-left: 3em;
   overflow-y: scroll;
 }
 
 .checkBox {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   font-family: Rubik;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .checkBox input {
   border: 3.5px solid #5B6171;
@@ -445,17 +558,25 @@ datalist option {
 }
 
 /* PAGINA JUEGO */
-.gamePage .off {
-  font-size: 32px;
-}
 .gamePage .price {
+  display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
-  padding: 2%;
-  font-family: Rubik Medium;
-  font-size: 24px;
-  color: #fcfcfc;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  padding: 1.5em;
   background-color: #101114;
   border-radius: 15px;
+}
+.gamePage .price p {
+  font-size: 1.5rem;
+}
+.gamePage .off {
+  font-size: 1.5rem;
 }
 .gamePage .noOff {
   width: auto;
@@ -464,24 +585,37 @@ datalist option {
 }
 .gamePage .priceBox {
   background-color: #101114;
-  padding: 0px;
+  padding: 0;
 }
 .gamePage .addButton {
-  padding: 5%;
+  padding: 0.5em 0.75em;
 }
 .gamePage .addButton p {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
+@media (max-width: 1200px) {
+  .gamePage .addButton {
+    padding: 0.75em 20% !important;
+  }
+  .gamePage .addButton img {
+    height: 2em;
+  }
+}
 .gallery {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   height: 100%;
-  margin-top: 18px;
+  margin-top: 1em;
 }
 .gallery .portrait {
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.75em;
 }
 
 .selector {
@@ -490,51 +624,84 @@ datalist option {
   overflow-y: none;
 }
 .selector img {
-  margin: 10px;
-  width: 128px;
-  height: 72px;
+  margin: 0.75em;
+  height: 4.5em;
   border-radius: 5px;
+}
+.selector img:nth-child(1) {
+  content: url("../../../res/img/gallery/gta1.jpg");
+}
+.selector img:nth-child(2) {
+  content: url("../../../res/img/gallery/gta2.jpg");
+}
+.selector img:nth-child(3) {
+  content: url("../../../res/img/gallery/gta3.jpg");
+}
+.selector img:nth-child(4) {
+  content: url("../../../res/img/gallery/gta4.jpg");
+}
+.selector img:nth-child(5) {
+  content: url("../../../res/img/gallery/gta5.jpg");
+}
+.selector img:nth-child(6) {
+  content: url("../../../res/img/gallery/gta6.jpg");
+}
+.selector img:nth-child(7) {
+  content: url("../../../res/img/gallery/gta7.jpg");
+}
+.selector img:nth-child(8) {
+  content: url("../../../res/img/gallery/gta8.jpg");
+}
+.selector img:nth-child(9) {
+  content: url("../../../res/img/gallery/gta9.jpg");
+}
+.selector img:nth-child(10) {
+  content: url("../../../res/img/gallery/gta10.jpg");
 }
 
 .description {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
   align-items: flex-start;
-  margin-top: 18px;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  margin-top: 1em;
   padding: 10%;
   height: 85%;
   background-color: #101114;
   border-radius: 15px;
 }
 .description h3 {
-  font-size: 28px;
+  font-size: 1.5rem;
   font-family: Rubik;
-  font-weight: normal;
 }
 .description h4 {
-  font-size: 24px;
-  font-family: Rubik;
-  font-weight: normal;
+  font-size: 1.25rem;
 }
 .description p {
-  font-size: 24px;
+  font-size: 1.25rem;
   color: #5B6171;
-  font-family: Rubik;
-  font-weight: normal;
 }
 .description .categories {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
   white-space: nowrap;
   overflow-x: auto;
   width: 100%;
 }
 .description .categories p {
-  margin: 10px;
+  margin: 0.5em;
   margin-top: 0;
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 0.5em 1em;
   border-radius: 30px;
   background-color: #090A0B;
 }
@@ -549,36 +716,47 @@ datalist option {
   overflow-y: scroll;
   height: 30%;
 }
-.descText p {
-  color: #5B6171;
-  font-family: Rubik;
-  font-size: 20px;
-  font-weight: normal;
-}
 
 .developer {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
 }
 
 .date {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
 }
 
 /* PAGINA CARRITO */
 .cartList {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
   align-items: flex-start;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
   height: 100%;
-  margin-top: 24px;
+  margin-top: 1.5em;
   padding: 5%;
   background-color: #101114;
   border-radius: 15px;
@@ -590,17 +768,28 @@ datalist option {
 
 .cartGames {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   overflow-y: scroll;
   width: 100%;
   height: 60%;
 }
 .cartGames .game {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   background-color: #5B6171;
   width: 95%;
-  margin: 15px auto;
+  margin: 1em auto;
 }
 .cartGames .game:first-child {
   margin-top: auto;
@@ -610,65 +799,100 @@ datalist option {
 }
 .cartGames .info {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   height: 100%;
 }
 .cartGames h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .delete {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: center;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
-  padding: 1.5%;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  padding: 0.3em;
   background-color: #101114;
   border-radius: 10px;
+}
+.delete img {
+  height: 1.75em;
 }
 
 .total {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
 }
 
 .buy {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   width: 100%;
   height: 15%;
 }
 
 .buyButton {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: center;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
-  padding: 2.5% 5%;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  padding: 1em 2em;
   background-color: #725AC1;
   border-radius: 10px;
 }
 .buyButton h3 {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 /* PAGINA LOGIN */
 .login {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
   align-items: stretch;
-  height: 600px;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  height: 35em;
   padding: 5% 7.5%;
   background-color: #101114;
   border-radius: 15px;
 }
 .login p {
-  font-size: 20px;
-  font-family: Rubik;
-  font-weight: normal;
+  font-size: 1.25rem;
   text-align: center;
 }
 .login a {
@@ -676,10 +900,10 @@ datalist option {
   text-decoration: underline;
 }
 .login #btLogin {
-  margin: 0 2%;
-  padding: 5% 0;
+  margin: 0 1.5%;
+  padding: 0.85em 0;
   font-family: Rubik Medium;
-  font-size: 28px;
+  font-size: 1.5rem;
   color: #fcfcfc;
   background-color: #725AC1;
   border-radius: 20px;
@@ -687,18 +911,20 @@ datalist option {
 
 .loginInput {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   margin: 0px 1.5%;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .loginInput input {
   height: auto;
-  margin: 2.5% 0;
-  padding: 5px;
-  font-size: 20px;
-  font-family: Rubik;
-  font-weight: normal;
-  color: #fcfcfc;
+  margin: 0.4em 0;
+  padding: 0.3em;
+  font-size: 1.25rem;
   background-color: #090A0B;
   border: 1px solid #5B6171;
   border-radius: 5px;
@@ -706,29 +932,42 @@ datalist option {
 
 /* PAGINA SIGNUP */
 .signup {
-  height: 700px;
+  height: 40em;
 }
 .signup .checkBox {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: center;
-  font-size: 18px;
-  font-family: Rubik;
-  font-weight: normal;
+  /* CONDICIONAL PARA ITEMS */
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+}
+.signup .checkBox p {
+  font-size: 1rem;
 }
 .signup .checkBox a {
-  color: #fcfcfc;
   text-decoration: underline;
 }
 .signup .checkBox input {
-  margin-right: 15px;
-  width: 20px;
-  height: 20px;
+  margin: 0;
+  margin-right: 0.75em;
+  width: 1em;
+  height: 1em;
 }
 
 /* FOOTER */
 .watermark {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
+  justify-content: flex-start;
+  /* CONDICIONAL PARA ITEMS */
   align-items: center;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
 }
 
 .brand {
@@ -737,47 +976,63 @@ datalist option {
 }
 
 .author {
-  margin-left: 15px;
-  font-size: 16px;
+  margin-left: 1em;
   color: #5B6171;
   font-family: Montserrat;
 }
 
 .contact {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
   align-items: flex-start;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
   padding-left: 20%;
-  height: 75px;
+  height: 4em;
 }
 .contact h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .icons {
   display: flex;
-  align-items: center;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: space-between;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: center;
+  /* CONDICIONAL PARA WRAP */
   flex-wrap: wrap;
   width: 100%;
-  min-width: 100px;
-  max-width: 250px;
+  min-width: 6.25em;
+  max-width: 15.625em;
 }
 .icons img {
-  margin: 5px;
+  margin: 0.3em;
+  width: 2em;
+  height: 2em;
 }
 
 .disclaimer {
   display: flex;
+  /* CONDICIONAL PARA DIRECTION */
+  flex-direction: row;
+  /* CONDICIONAL PARA JUSTIFY */
   justify-content: center;
-  margin-top: 125px;
+  /* CONDICIONAL PARA ITEMS */
+  align-items: flex-start;
+  /* CONDICIONAL PARA WRAP */
+  flex-wrap: nowrap;
+  margin-top: 7.8125em;
 }
 .disclaimer p, .disclaimer u {
-  width: 100%;
   color: #5B6171;
   font-family: Montserrat;
-  font-size: 16px;
   text-align: justify;
 }
 

@@ -1,20 +1,22 @@
 .gamePage{
 
-    .off{
-        font-size: 32px;
-    }
-
     .price{
-        justify-content: space-between;
+        @include flex(row, between, center, nowrap);
     
-        padding: 2%;
+        padding: 1.5em;
     
-        font-family: Rubik Medium;
-        font-size: 24px;
-        color: $color-white;
         background-color: $color-bg-secondary;
         border-radius: 15px;
+
+        p{
+            font-size: map-get($font-size, l);
+        }
     }
+
+    .off{
+        font-size: map-get($font-size, l);
+    }
+
     
     .noOff{
         width: auto;
@@ -25,30 +27,41 @@
 
     .priceBox{
         background-color: $color-bg-secondary;
-        padding: 0px;
+        padding: 0;
     }
 
     .addButton{
-        padding: 5%;
+        padding: .5em .75em;
         
         p{
-            font-size: 18px;
+            font-size: map-get($font-size, s);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .gamePage{
+        .addButton{
+            padding: .75em 20% !important;
+
+            img{
+                height: 2em;
+            }
         }
     }
 }
 
 .gallery{
-    display: flex;
-    flex-direction: column;
+    @include flex(col, none, none, nowrap);
     
     height: 100%;
 
-    margin-top: 18px;
+    margin-top: 1em;
 
     .portrait{
         height: auto;
     
-        margin-bottom: 10px;
+        margin-bottom: .75em;
     }
 }
 
@@ -58,23 +71,24 @@
     overflow-y: none;
 
     img{
-        margin: 10px;
+        margin: .75em;
     
-        width: 128px;
-        height: 72px;
+        height: 4.5em;
     
         border-radius: 5px;
+
+        @for $i from 1 through 10{
+            &:nth-child(#{$i}){
+                content: url("../../../res/img/gallery/gta#{$i}.jpg");
+            }
+        }
     }
 }
 
 .description{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include flex(col, between, start, nowrap);
 
-
-    margin-top: 18px;
+    margin-top: 1em;
 
     padding: 10%;
 
@@ -85,40 +99,32 @@
     border-radius: 15px;
 
     h3{
-        font-size: 28px;
+        font-size: map-get($font-size, l);
         font-family: Rubik;
-        font-weight: normal;
     }
 
     h4{
-        font-size: 24px;
-        font-family: Rubik;
-        font-weight: normal;
+        font-size: map-get($font-size, m);
     }
 
     p{
-        font-size: 24px;
+        font-size: map-get($font-size, m);
         color: $color-secondary;
-        font-family: Rubik;
-        font-weight: normal;
     }
 
     .categories{
-        display: flex;
-        flex-wrap: nowrap;
+        @include flex(row, none, none, nowrap);
         white-space: nowrap;
         overflow-x: auto;
         
         width: 100%;
 
         p{
-
-            margin: 10px;
+            margin: .5em;
             margin-top: 0;
         
-            padding: 10px 20px;
+            padding: .5em 1em;
         
-            font-size: 20px;
             border-radius: 30px;
             background-color: $color-bg-primary;
 
@@ -137,27 +143,16 @@
     overflow-y: scroll;
 
     height: 30%;
-
-    p{
-        color: $color-secondary;
-        font-family: Rubik;
-        font-size: 20px;
-        font-weight: normal;
-    }
 }
 
 .developer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(row, between, center, nowrap);
 
     width: 100%;
 }
 
 .date{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(row, between, center, nowrap);
 
     width: 100%;
 }

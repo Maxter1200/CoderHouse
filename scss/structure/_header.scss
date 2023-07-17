@@ -1,22 +1,23 @@
 .menu{
     margin: 0;
 
-    color: $color-white;
-    font-family: Rubik Medium;
-    font-size: 20px;
-
     list-style: none;
+
+    p{
+        color: $color-white;
+        font-family: Rubik Medium;
+        font-size: map-get($font-size, m) !important;
+    }
 }
 
 .logo{
-    height: 50px;
+    height: 3.125em;
 }
 
 .search{
     width: auto;
-    height: 50px;
 
-    padding: 10px;
+    padding: .75em;
 
     background-color: $color-secondary;
     border-radius: 10px;
@@ -25,7 +26,7 @@
 .searchBox{
     margin-left: 5px;
 
-    width: calc(100% - 35px);
+    width: calc(100% - 2.5em);
     background-color: $color-secondary;
     border: none;
     outline: none;
@@ -33,7 +34,7 @@
     color: $color-white;
     font-family: Rubik;
     font-weight: normal;
-    font-size: 18px;
+    font-size: map-get($font-size, s);
 
     &::placeholder{
         color: $color-white;
@@ -42,16 +43,15 @@
 
 .cart{
     a{
-        display: flex;
-        align-items: center;
+        @include flex(row, start, center, nowrap);
 
         img{
             position: relative;
             top: -2px;
         
-            margin-right: 12px;
+            margin-right: .75em;
         
-            height: 40px;
+            height: 2.5em;
         }
 
         p{
@@ -62,13 +62,12 @@
 
 .profile{
     a{
-        display: flex;
-        align-items: center;
+        @include flex(row, start, center, nowrap);
 
         img{
-            margin-right: 12px;
+            margin-right: .75em;
         
-            height: 38px;
+            height: calc(2.5em - 2px);
         }
 
         p{
@@ -82,23 +81,18 @@
         content: url("../res/icon/icon_2.png");
     }
     
-    .cart a p{
-        display: none;
-    }
-
-    .cart a img{
-        margin: 0;
-    }
-    
-    .profile a p{
-        display: none;
-    }
-
-    .profile a img{
-        margin: 0;
-    }
-
     .searchBox::placeholder{
         color: $color-secondary;
+    }
+
+    .menu
+    {
+        p{
+            display: none;
+        }
+
+        img{
+            margin: 0;
+        }
     }
 }

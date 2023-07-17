@@ -1,9 +1,9 @@
 .game{
     display: flex;
 
-    margin: 1.5% 0;
+    margin: .5em 0;
 
-    padding: 2.5%;
+    padding: 1em;
 
     width: 100%;
 
@@ -20,54 +20,48 @@
 }
 
 .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(col, between, none, nowrap);
 
     padding-left: 5%;
-
-    font-size: 20px;
 }
 
 .platforms{
-    display: flex;
-    align-items: center;
+    @include flex(row, start, center, nowrap);
 
     margin-left: auto;
-
-    padding: 5% 1.5%;
     
+    padding: 0 .3em;
     width: auto;
 
     background-color: $color-secondary;
     border-radius: 10px;
 
     .fa-brands{
-        margin: 0 0.5rem;
+        font-size: 1.125rem;
+        margin: .85em .5em;
     }
 }
 
 .categories{
-    font-family: Rubik;
-    font-size: 18px;
     color: $color-secondary;
 }
 
 .off{
 
-    padding: 1.25%;
+    padding: .25em;
     
     width: auto;
 
     border-radius: 5px;
     background-color: $color-primary;
 
-    font-size: 20px;
+    font-size: map-get($font-size, m);
+    font-family: Rubik Medium;
+    font-weight: 500;
 }
 
 .price{
-    display: flex;
-    align-items: center;
+    @include flex(row, start, center, nowrap);
 
     padding: 0;
 }
@@ -77,48 +71,46 @@
     padding: 0;
 
     color: $color-secondary;
-    font-family: Rubik;
     text-decoration: line-through;
 }
 
 .priceBox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(row, around, center, nowrap);
 
-    padding: 2% 3%;
+    padding: .3em .5em;
 
     background-color: $color-secondary;
     border-radius: 10px;
+
+    p{
+        font-family: Rubik Medium;
+        font-weight: 500;
+    }
 }
 
 .addButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center, nowrap);
 
-    padding: 2% 20%;
+    padding: .3em 20%;
 
     background-color: $color-primary;
     border-radius: 10px;
 
+    img{
+        height: 1.5em;
+    }
+
     p{
-        margin-left: 5px;
-    
-        color: $color-white;
-        font-family: Rubik Medium;
-        font-size: 16px;
+        margin-left: .3em;
     }
 }
 
 .featured{
+    margin-bottom: 3em;
     .game{
-        display: flex;
-        flex-direction: column;
-        justify-content: none;
-        align-items: center;
+        @include flex(col, none, center, nowrap);
     
-        margin-top: 18px;
+        margin-top: 1em;
     
         padding: 0;
     
@@ -133,29 +125,28 @@
     }
 
     .info{
-        flex-direction: row;
-        justify-content: none;
-        align-items: center;
+        @include flex(row, none, center, nowrap);
     
         width: 100%;
     
-        padding: 2.5%;
+        padding: 1em;
     }
 }
 
-.bestGames{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.bestSellers{
+    margin-bottom: 3em;
+}
 
-    margin-top: 18px;
-    margin-bottom: auto;
+.bestGames{
+    @include flex(col, between, none, nowrap);
+
+    margin-top: 1em;
 
     height: 90%;
 }
 
 .split{
-    margin: 75px 0;
+    margin-bottom: 3em;
     
     border: 3px solid $color-bg-secondary;
     border-radius: 5px;
@@ -164,8 +155,7 @@
 }
 
 .splitVertical{
-    display: flex;
-    flex-direction: column;
+    @include flex(col, none, none, nowrap);
 
     width: 0;
 
@@ -180,71 +170,71 @@
 }
 
 .gameList{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(col, between, none, nowrap);
 
-    margin-top: 18px;
+    margin-top: 1em;
 
     height: 100%;
 
     .addButton{
-        padding: 2% 7.5%;
+        padding: .3em 1em;
     }
 
     .noOff{
         margin-left: auto;
         margin-right: auto;
-    
-        font-size: 18px;
     }
 }
 
 @media (max-width: 1200px) {
-    .gameList .addButton{
-        padding: 2% 20%;
+    .gameList{
+        .addButton{
+            padding: .3em 20%;
+        }
     }
 
-    .gamePage .addButton{
-        padding: 5% 20% !important;
-    }
-
-    .addButton p{
-        display: none;
+    .addButton{
+        p{
+            display: none;
+        }
     }
 
     .splitVertical{
         display: none;
     }
 
-    .filters, .filters h2, .filters p, .filters .sliderBar, .filters .catContainer {
+    .filters{
         display: none;
 
         max-height: 0;
+
+        h2, h3, .sliderBar, .catContainer{
+            display: none;
+
+            max-height: 0;
+        }
     }
 }
 
 .filters{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(col, between, none, nowrap);
 
     height: 650px;
-    p{
-        font-size: 28px;
+    h3{
+        font-size: map-get($font-size, l);
         font-family: Rubik;
+        font-weight: normal
     }
 }
 
 datalist {
-    display: flex;
-    justify-content: space-between;
+    @include flex(row, between, none, nowrap);
 
     margin-top: 10px;
 
     option{
         font-family: Rubik;
-        font-size: 16px;
+        font-size: map-get($font-size, s);
         font-weight: normal;
     }
 }
@@ -253,7 +243,7 @@ datalist {
     background-color: $color-bg-secondary;
     border-radius: 10px;
 
-    padding: 15px 25px;
+    padding: 1em 1.5em;
 }
 
 .slider{
@@ -291,28 +281,27 @@ datalist {
 
     height: 55%;
 
-    padding: 25px 50px;
+    padding: 1.5em 3em;
 
     background-color: $color-bg-secondary;
     border-radius: 15px;
 }
 
 .filterCategories{
-    display: flex;
-    flex-direction: column;
+    @include flex(col, none, none, nowrap);
     
     height: 100%;
 
-    padding-left: 50px;
+    padding-left: 3em;
 
     overflow-y: scroll;
 }
 
 .checkBox{
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
 
     font-family: Rubik;
-    font-size: 20px;
+    font-size: map-get($font-size, m);
 
     input{
         border: 3.5px solid $color-secondary;

@@ -1,0 +1,56 @@
+@mixin flex($dir, $justify, $items, $wrap){
+    display: flex;
+    
+    /* CONDICIONAL PARA DIRECTION */
+    @if $dir == "row" or $dir == "r" or $dir == "fila"{
+        flex-direction: row;
+    }
+    @else if $dir == "column" or $dir == "col" or $dir == "c" or $dir == "columna"{
+        flex-direction: column;
+    }
+
+    /* CONDICIONAL PARA JUSTIFY */
+    @if $justify == "center" or $justify == "c" or $justify == "centro"{
+        justify-content: center;
+    }
+    @else if $justify == "start" or $justify == "s" or $justify == "flex-start" or $justify == "inicio"{
+        justify-content: flex-start;
+    }
+    @else if $justify == "end" or $justify == "e" or $justify == "flex-end" or $justify == "fin"{
+        justify-content: flex-end;
+    }
+    @else if $justify == "between" or $justify == "b" or $justify == "space-between" or $justify == "sb" or $justify == "entre"{
+        justify-content: space-between;
+    }
+    @else if $justify == "around" or $justify == "a" or $justify == "space-around" or $justify == "sa" or $justify == "alrededor"{
+        justify-content: space-around;
+    }
+    @else if $justify == "evenly" or $justify == "ev" or $justify == "space-evenly" or $justify == "se" or $justify == "igual"{
+        justify-content: space-evenly;
+    }
+
+    /* CONDICIONAL PARA ITEMS */
+    @if $items == "center" or $items == "c" or $items == "centro"{
+        align-items: center;
+    }
+    @else if $items == "start" or $items == "s" or $items == "flex-start" or $items == "inicio"{
+        align-items: flex-start;
+    }
+    @else if $items == "end" or $items == "e" or $items == "flex-end" or $items == "fin"{
+        align-items: flex-end;
+    }
+    @else if $items == "stretch" or $items == "sh" or $items == "sth" or $items == "strech" or $items == "estirar"{
+        align-items: stretch;
+    }
+
+    /* CONDICIONAL PARA WRAP */
+    @if $wrap == "wrap" or $wrap == "w" or $wrap == "true"{
+        flex-wrap: wrap;
+    }
+    @else if $wrap == "reverse" or $wrap == "r" or $wrap == "wrap-reverse" or $wrap == "wr" or $wrap == "wrap-r"{
+        flex-wrap: wrap-reverse;
+    }
+    @else{
+        flex-wrap: nowrap;
+    }
+}

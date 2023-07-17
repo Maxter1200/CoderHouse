@@ -4,3 +4,14 @@ $color-white: #fcfcfc;
 
 $color-bg-primary: #090A0B;
 $color-bg-secondary: #101114;
+
+$font-size: (
+    xs: .75rem,
+    s: 1rem,
+    m: 1.25rem,
+    l: 1.5rem,
+    xl: 2rem,
+    xxl: 2.5rem,
+);
+
+@import "mixins";
