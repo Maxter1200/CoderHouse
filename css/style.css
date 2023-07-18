@@ -1,7 +1,7 @@
 /* ---UNIVERSAL--- */
 /* VARIABLES */
 /* EXTENDS */
-@import "../../node_modules/animate.css/animate.css";
+@import url("animate.css");
 .anim-none, .gallery .portrait, .featured .portrait {
   transition: none;
 }
