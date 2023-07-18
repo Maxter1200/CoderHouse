@@ -12,6 +12,8 @@
 
 .logo{
     height: 3.125em;
+
+    @extend .anim-pop;
 }
 
 .search{
@@ -21,6 +23,15 @@
 
     background-color: $color-secondary;
     border-radius: 10px;
+
+    @extend .anim-pop-shadow;
+    
+    &:hover{
+        i{
+            animation-name: swing;
+            animation-duration: 1s;
+        }
+    }
 }
 
 .searchBox{
@@ -57,6 +68,16 @@
         p{
             margin: 0;
         }
+
+        @extend .anim-pop;
+
+        &:hover{
+            img{
+                animation-name: swing;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
     }
 }
 
@@ -72,6 +93,16 @@
 
         p{
             margin: 0;
+        }
+
+        @extend .anim-pop;
+
+        &:hover{
+            img{
+                animation-name: pulse;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
         }
     }
 }

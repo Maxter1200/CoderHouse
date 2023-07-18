@@ -11,6 +11,9 @@
     background-color: $color-bg-secondary;
     border-radius: 15px;
 
+    animation-name: anim-fade-up;
+    animation-duration: 1s;
+
     .priceBox{
         justify-content: center;
     
@@ -35,6 +38,8 @@
         width: 95%;
     
         margin: 1em auto;
+
+        @extend .anim-pop-shadow;
 
         &:first-child{
             margin-top: auto;
@@ -64,6 +69,16 @@
     background-color: $color-bg-secondary;
     border-radius: 10px;
 
+    @extend .anim-pop-shadow;
+
+    &:hover{
+        img{
+            animation-name: swing;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+
     img{
         height: 1.75em;
     }
@@ -80,6 +95,10 @@
 
     width: 100%;
     height: 15%;
+
+    h3{
+        @extend .anim-pop;
+    }
 }
 
 .buyButton{
@@ -89,6 +108,8 @@
 
     background-color: $color-primary;
     border-radius: 10px;
+
+    @extend .anim-pop-shadow;
 
     h3{
         font-size: map-get($font-size, xl);

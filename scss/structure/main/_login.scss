@@ -9,6 +9,9 @@
     background-color: $color-bg-secondary;
     border-radius: 15px;
 
+    animation-name: anim-fade-down;
+    animation-duration: 1s;
+
     p{
         font-size: map-get($font-size, m);
     
@@ -21,17 +24,20 @@
     }
 
     #btLogin{
-
+        
         margin: 0 1.5%;
-    
+        
         padding: .85em 0;
-    
+        
         font-family: Rubik Medium;
         font-size: map-get($font-size, l);
         color: $color-white;
-    
+        
         background-color: $color-primary;
+        border: none;
         border-radius: 20px;
+
+        @extend .anim-pop-shadow;
     }
 }
 
@@ -54,5 +60,7 @@
         background-color: $color-bg-primary;
         border: 1px solid $color-secondary;
         border-radius: 5px;
+
+        @extend .anim-pop-shadow;
     }
 }

@@ -1,0 +1,49 @@
+.anim-none{
+    transition: none;
+
+    &:hover, &:focus{
+        cursor: auto;
+    
+        transform: none;
+    
+        transition: none;
+    }
+}
+
+.anim-pop{
+    transition: .125s;
+    
+    &:hover, &:focus{
+        cursor: pointer;
+    
+        transform: scale(1.04);
+    
+        transition: .25s;
+    }
+}
+
+.anim-pop-shadow{
+    transition: .125s;
+    
+    &:hover, &:focus{
+        cursor: pointer;
+    
+        box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
+        transform: scale(1.04);
+    
+        transition: .25s;
+    }
+}
+
+.anim-pop-light{
+    transition: .125s;
+    
+    &:hover, &:focus{
+        cursor: pointer;
+    
+        box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);
+        transform: scale(1.04);
+    
+        transition: .25s;
+    }
+}

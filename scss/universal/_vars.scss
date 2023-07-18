@@ -14,4 +14,11 @@ $font-size: (
     xxl: 2.5rem,
 );
 
+/* EXTENDS */
+@import "extends";
+
+/* MIXINS */
 @import "mixins";
+
+/* ANIMACIONES */
+@import "anim";

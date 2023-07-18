@@ -1,4 +1,6 @@
 .signup{
+    @extend .login;
+    
     height: 40em;
 
     .checkBox{

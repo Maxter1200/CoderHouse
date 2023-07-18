@@ -34,6 +34,9 @@ h1{
     font-weight: 500;
     color: $color-white;
     font-family: Rubik Medium;
+
+    animation-name: anim-fade;
+    animation-duration: 1s;
 }
 
 h2{
@@ -43,6 +46,9 @@ h2{
     font-weight: 500;
     color: $color-white;
     font-family: Rubik Medium;
+
+    animation-name: anim-fade;
+    animation-duration: 1s;
 }
 
 h3{

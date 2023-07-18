@@ -17,6 +17,8 @@
     height: auto;
 
     border-radius: 10px;
+
+    @extend .anim-pop-shadow;
 }
 
 .info{
@@ -58,6 +60,11 @@
     font-size: map-get($font-size, m);
     font-family: Rubik Medium;
     font-weight: 500;
+
+    &:hover{
+        animation-name: tada-1;
+        animation-duration: .75s;
+    }
 }
 
 .price{
@@ -72,6 +79,11 @@
 
     color: $color-secondary;
     text-decoration: line-through;
+
+    &:hover{
+        animation-name: headShake;
+        animation-duration: 1s;
+    }
 }
 
 .priceBox{
@@ -96,6 +108,16 @@
     background-color: $color-primary;
     border-radius: 10px;
 
+    @extend .anim-pop-shadow;
+
+    &:hover{
+        img{
+            animation-name: pulse;
+            animation-duration: .75s;
+            animation-iteration-count: infinite;
+        }
+    }
+
     img{
         height: 1.5em;
     }
@@ -106,7 +128,9 @@
 }
 
 .featured{
-    margin-bottom: 3em;
+    animation-name: anim-fade-down;
+    animation-duration: 1s;
+
     .game{
         @include flex(col, none, center, nowrap);
     
@@ -115,13 +139,30 @@
         padding: 0;
     
         height: 90%;
+
+        margin-bottom: 3em;
+
+        background: none;
+
+        @extend .anim-pop;
+        &:hover{
+            cursor: auto;
+        }
     }
+    
+    
 
     .portrait{
         width: 100%;
     
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        @extend .anim-none;
+        
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .info{
@@ -130,11 +171,19 @@
         width: 100%;
     
         padding: 1em;
+        
+        background-color: $color-bg-secondary;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 }
 
 .bestSellers{
     margin-bottom: 3em;
+
+    animation-name: anim-fade-down;
+    animation-duration: 1s;
 }
 
 .bestGames{
@@ -175,6 +224,9 @@
     margin-top: 1em;
 
     height: 100%;
+
+    animation-name: anim-fade-right;
+    animation-duration: 1s;
 
     .addButton{
         padding: .3em 1em;
@@ -220,6 +272,10 @@
     @include flex(col, between, none, nowrap);
 
     height: 650px;
+
+    animation-name: anim-fade-left;
+    animation-duration: 1s;
+    
     h3{
         font-size: map-get($font-size, l);
         font-family: Rubik;

@@ -12,6 +12,11 @@
 
     color: $color-secondary;
     font-family: Montserrat;
+
+    &:hover{
+        animation-name: tada;
+        animation-duration: 1s;
+    }
 }
 
 .contact{
@@ -37,6 +42,8 @@
         margin: 0.3em;
         width: 2em;
         height: 2em;
+
+        @extend .anim-pop;
     }
 }
 

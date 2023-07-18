@@ -8,6 +8,9 @@
         background-color: $color-bg-secondary;
         border-radius: 15px;
 
+        animation-name: anim-fade-up;
+        animation-duration: 1s;
+
         p{
             font-size: map-get($font-size, l);
         }
@@ -62,6 +65,11 @@
         height: auto;
     
         margin-bottom: .75em;
+
+        animation-name: anim-fade-right;
+        animation-duration: 1s;
+
+        @extend .anim-none;
     }
 }
 
@@ -70,6 +78,9 @@
     overflow-x: scroll;
     overflow-y: none;
 
+    animation-name: anim-fade-up;
+    animation-duration: 1s;
+
     img{
         margin: .75em;
     
@@ -77,9 +88,11 @@
     
         border-radius: 5px;
 
+        @extend .anim-pop-shadow;
+
         @for $i from 1 through 10{
             &:nth-child(#{$i}){
-                content: url("../../../res/img/gallery/gta#{$i}.jpg");
+                content: url("../res/img/gallery/gta#{$i}.jpg");
             }
         }
     }
@@ -97,6 +110,9 @@
 
     background-color: $color-bg-secondary;
     border-radius: 15px;
+
+    animation-name: anim-fade-left;
+    animation-duration: 1s;
 
     h3{
         font-size: map-get($font-size, l);
@@ -121,12 +137,13 @@
 
         p{
             margin: .5em;
-            margin-top: 0;
         
             padding: .5em 1em;
         
             border-radius: 30px;
             background-color: $color-bg-primary;
+
+            @extend .anim-pop-shadow;
 
             &:first-child{
                 margin-left: auto;

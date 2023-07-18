@@ -1,5 +1,95 @@
 /* ---UNIVERSAL--- */
 /* VARIABLES */
+/* EXTENDS */
+@import "../../node_modules/animate.css/animate.css";
+.anim-none, .gallery .portrait, .featured .portrait {
+  transition: none;
+}
+.anim-none:hover, .gallery .portrait:hover, .featured .portrait:hover, .anim-none:focus, .gallery .portrait:focus, .featured .portrait:focus {
+  cursor: auto;
+  transform: none;
+  transition: none;
+}
+
+.anim-pop, .icons img, .buy h3, .featured .game, .profile a, .cart a, .logo {
+  transition: 0.125s;
+}
+.anim-pop:hover, .icons img:hover, .buy h3:hover, .featured .game:hover, .profile a:hover, .cart a:hover, .logo:hover, .anim-pop:focus, .icons img:focus, .buy h3:focus, .featured .game:focus, .profile a:focus, .cart a:focus, .logo:focus {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.25s;
+}
+
+.anim-pop-shadow, .loginInput input, .login #btLogin, .signup #btLogin, .buyButton, .delete, .cartGames .game, .description .categories p, .selector img, .addButton, .portrait, .search {
+  transition: 0.125s;
+}
+.anim-pop-shadow:hover, .loginInput input:hover, .login #btLogin:hover, .signup #btLogin:hover, .buyButton:hover, .delete:hover, .cartGames .game:hover, .description .categories p:hover, .selector img:hover, .addButton:hover, .portrait:hover, .search:hover, .anim-pop-shadow:focus, .loginInput input:focus, .login #btLogin:focus, .signup #btLogin:focus, .buyButton:focus, .delete:focus, .cartGames .game:focus, .description .categories p:focus, .selector img:focus, .addButton:focus, .portrait:focus, .search:focus {
+  cursor: pointer;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.04);
+  transition: 0.25s;
+}
+
+.anim-pop-light {
+  transition: 0.125s;
+}
+.anim-pop-light:hover, .anim-pop-light:focus {
+  cursor: pointer;
+  box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);
+  transform: scale(1.04);
+  transition: 0.25s;
+}
+
+/* MIXINS */
+/* ANIMACIONES */
+@keyframes anim-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim-fade-up {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anim-fade-right {
+  0% {
+    transform: translateX(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes anim-fade-left {
+  0% {
+    transform: translateX(15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes anim-fade-down {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* FUENTES */
 @font-face {
   font-family: Rubik;
@@ -48,6 +138,8 @@ h1 {
   font-weight: 500;
   color: #fcfcfc;
   font-family: Rubik Medium;
+  animation-name: anim-fade;
+  animation-duration: 1s;
 }
 
 h2 {
@@ -56,6 +148,8 @@ h2 {
   font-weight: 500;
   color: #fcfcfc;
   font-family: Rubik Medium;
+  animation-name: anim-fade;
+  animation-duration: 1s;
 }
 
 h3 {
@@ -93,6 +187,7 @@ a {
 } /* ---ESTRUCTURA--- */
 header {
   position: fixed;
+  z-index: 99;
   display: flex;
   /* CONDICIONAL PARA DIRECTION */
   flex-direction: row;
@@ -142,6 +237,10 @@ footer {
   background-color: #5B6171;
   border-radius: 10px;
 }
+.search:hover i {
+  animation-name: swing;
+  animation-duration: 1s;
+}
 
 .searchBox {
   margin-left: 5px;
@@ -178,6 +277,11 @@ footer {
 .cart a p {
   margin: 0;
 }
+.cart a:hover img {
+  animation-name: swing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
 .profile a {
   display: flex;
@@ -196,6 +300,11 @@ footer {
 }
 .profile a p {
   margin: 0;
+}
+.profile a:hover img {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @media (max-width: 992px) {
@@ -274,6 +383,10 @@ footer {
   font-family: Rubik Medium;
   font-weight: 500;
 }
+.off:hover {
+  animation-name: tada-1;
+  animation-duration: 0.75s;
+}
 
 .price {
   display: flex;
@@ -293,6 +406,10 @@ footer {
   padding: 0;
   color: #5B6171;
   text-decoration: line-through;
+}
+.noOff:hover {
+  animation-name: headShake;
+  animation-duration: 1s;
 }
 
 .priceBox {
@@ -328,6 +445,11 @@ footer {
   background-color: #725AC1;
   border-radius: 10px;
 }
+.addButton:hover img {
+  animation-name: pulse;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+}
 .addButton img {
   height: 1.5em;
 }
@@ -336,7 +458,8 @@ footer {
 }
 
 .featured {
-  margin-bottom: 3em;
+  animation-name: anim-fade-down;
+  animation-duration: 1s;
 }
 .featured .game {
   display: flex;
@@ -350,11 +473,19 @@ footer {
   margin-top: 1em;
   padding: 0;
   height: 90%;
+  margin-bottom: 3em;
+  background: none;
+}
+.featured .game:hover {
+  cursor: auto;
 }
 .featured .portrait {
   width: 100%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+.featured .portrait:hover {
+  cursor: pointer;
 }
 .featured .info {
   display: flex;
@@ -367,10 +498,16 @@ footer {
   flex-wrap: nowrap;
   width: 100%;
   padding: 1em;
+  background-color: #101114;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .bestSellers {
   margin-bottom: 3em;
+  animation-name: anim-fade-down;
+  animation-duration: 1s;
 }
 
 .bestGames {
@@ -422,6 +559,8 @@ footer {
   flex-wrap: nowrap;
   margin-top: 1em;
   height: 100%;
+  animation-name: anim-fade-right;
+  animation-duration: 1s;
 }
 .gameList .addButton {
   padding: 0.3em 1em;
@@ -460,6 +599,8 @@ footer {
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
   height: 650px;
+  animation-name: anim-fade-left;
+  animation-duration: 1s;
 }
 .filters h3 {
   font-size: 1.5rem;
@@ -571,6 +712,8 @@ datalist option {
   padding: 1.5em;
   background-color: #101114;
   border-radius: 15px;
+  animation-name: anim-fade-up;
+  animation-duration: 1s;
 }
 .gamePage .price p {
   font-size: 1.5rem;
@@ -616,12 +759,16 @@ datalist option {
 .gallery .portrait {
   height: auto;
   margin-bottom: 0.75em;
+  animation-name: anim-fade-right;
+  animation-duration: 1s;
 }
 
 .selector {
   display: flex;
   overflow-x: scroll;
   overflow-y: none;
+  animation-name: anim-fade-up;
+  animation-duration: 1s;
 }
 .selector img {
   margin: 0.75em;
@@ -629,34 +776,34 @@ datalist option {
   border-radius: 5px;
 }
 .selector img:nth-child(1) {
-  content: url("../../../res/img/gallery/gta1.jpg");
+  content: url("../res/img/gallery/gta1.jpg");
 }
 .selector img:nth-child(2) {
-  content: url("../../../res/img/gallery/gta2.jpg");
+  content: url("../res/img/gallery/gta2.jpg");
 }
 .selector img:nth-child(3) {
-  content: url("../../../res/img/gallery/gta3.jpg");
+  content: url("../res/img/gallery/gta3.jpg");
 }
 .selector img:nth-child(4) {
-  content: url("../../../res/img/gallery/gta4.jpg");
+  content: url("../res/img/gallery/gta4.jpg");
 }
 .selector img:nth-child(5) {
-  content: url("../../../res/img/gallery/gta5.jpg");
+  content: url("../res/img/gallery/gta5.jpg");
 }
 .selector img:nth-child(6) {
-  content: url("../../../res/img/gallery/gta6.jpg");
+  content: url("../res/img/gallery/gta6.jpg");
 }
 .selector img:nth-child(7) {
-  content: url("../../../res/img/gallery/gta7.jpg");
+  content: url("../res/img/gallery/gta7.jpg");
 }
 .selector img:nth-child(8) {
-  content: url("../../../res/img/gallery/gta8.jpg");
+  content: url("../res/img/gallery/gta8.jpg");
 }
 .selector img:nth-child(9) {
-  content: url("../../../res/img/gallery/gta9.jpg");
+  content: url("../res/img/gallery/gta9.jpg");
 }
 .selector img:nth-child(10) {
-  content: url("../../../res/img/gallery/gta10.jpg");
+  content: url("../res/img/gallery/gta10.jpg");
 }
 
 .description {
@@ -674,6 +821,8 @@ datalist option {
   height: 85%;
   background-color: #101114;
   border-radius: 15px;
+  animation-name: anim-fade-left;
+  animation-duration: 1s;
 }
 .description h3 {
   font-size: 1.5rem;
@@ -700,7 +849,6 @@ datalist option {
 }
 .description .categories p {
   margin: 0.5em;
-  margin-top: 0;
   padding: 0.5em 1em;
   border-radius: 30px;
   background-color: #090A0B;
@@ -760,6 +908,8 @@ datalist option {
   padding: 5%;
   background-color: #101114;
   border-radius: 15px;
+  animation-name: anim-fade-up;
+  animation-duration: 1s;
 }
 .cartList .priceBox {
   justify-content: center;
@@ -826,6 +976,11 @@ datalist option {
   background-color: #101114;
   border-radius: 10px;
 }
+.delete:hover img {
+  animation-name: swing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 .delete img {
   height: 1.75em;
 }
@@ -856,7 +1011,6 @@ datalist option {
   width: 100%;
   height: 15%;
 }
-
 .buyButton {
   display: flex;
   /* CONDICIONAL PARA DIRECTION */
@@ -876,7 +1030,7 @@ datalist option {
 }
 
 /* PAGINA LOGIN */
-.login {
+.login, .signup {
   display: flex;
   /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
@@ -890,22 +1044,25 @@ datalist option {
   padding: 5% 7.5%;
   background-color: #101114;
   border-radius: 15px;
+  animation-name: anim-fade-down;
+  animation-duration: 1s;
 }
-.login p {
+.login p, .signup p {
   font-size: 1.25rem;
   text-align: center;
 }
-.login a {
+.login a, .signup a {
   color: #fcfcfc;
   text-decoration: underline;
 }
-.login #btLogin {
+.login #btLogin, .signup #btLogin {
   margin: 0 1.5%;
   padding: 0.85em 0;
   font-family: Rubik Medium;
   font-size: 1.5rem;
   color: #fcfcfc;
   background-color: #725AC1;
+  border: none;
   border-radius: 20px;
 }
 
@@ -979,6 +1136,10 @@ datalist option {
   margin-left: 1em;
   color: #5B6171;
   font-family: Montserrat;
+}
+.author:hover {
+  animation-name: tada;
+  animation-duration: 1s;
 }
 
 .contact {
