@@ -71,7 +71,17 @@
 
     @extend .anim-pop-shadow;
 
-    &:hover{
+    @media (hover: hover){
+        &:hover{
+            img{
+                animation-name: swing;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    &:active, &:focus{
         img{
             animation-name: swing;
             animation-duration: 1s;

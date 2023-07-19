@@ -1,19 +1,39 @@
 .anim-none{
     transition: none;
 
-    &:hover, &:focus{
+    @media (hover: hover){
+        &:hover{
+            cursor: auto;
+        
+            transform: none;
+        
+            transition: none;
+        }
+    }
+
+    &:active, &:focus{
         cursor: auto;
-    
+        
         transform: none;
-    
+        
         transition: none;
     }
 }
 
 .anim-pop{
     transition: .125s;
+
+    @media (hover: hover){
+        &:hover{
+            cursor: pointer;
+        
+            transform: scale(1.04);
+        
+            transition: .25s;
+        }
+    }
     
-    &:hover, &:focus{
+    &:active, &:focus{
         cursor: pointer;
     
         transform: scale(1.04);
@@ -24,8 +44,19 @@
 
 .anim-pop-shadow{
     transition: .125s;
+
+    @media (hover: hover){
+        &:hover{
+            cursor: pointer;
+        
+            box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
+            transform: scale(1.04);
+        
+            transition: .25s;
+        }
+    }
     
-    &:hover, &:focus{
+    &:active, &:focus{
         cursor: pointer;
     
         box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
@@ -37,8 +68,19 @@
 
 .anim-pop-light{
     transition: .125s;
+
+    @media (hover: hover){
+        &:hover{
+            cursor: pointer;
+        
+            box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);
+            transform: scale(1.04);
+        
+            transition: .25s;
+        }
+    }
     
-    &:hover, &:focus{
+    &:active, &:focus{
         cursor: pointer;
     
         box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);

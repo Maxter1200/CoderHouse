@@ -61,7 +61,14 @@
     font-family: Rubik Medium;
     font-weight: 500;
 
-    &:hover{
+    @media (hover: hover){
+        &:hover{
+            animation-name: tada-1;
+            animation-duration: .75s;
+        }
+    }
+
+    &:active, &:focus{
         animation-name: tada-1;
         animation-duration: .75s;
     }
@@ -80,7 +87,14 @@
     color: $color-secondary;
     text-decoration: line-through;
 
-    &:hover{
+    @media (hover: hover){
+        &:hover{
+            animation-name: headShake;
+            animation-duration: 1s;
+        }
+    }
+
+    &:active, &:focus{
         animation-name: headShake;
         animation-duration: 1s;
     }
@@ -110,7 +124,17 @@
 
     @extend .anim-pop-shadow;
 
-    &:hover{
+    @media (hover: hover){
+        &:hover{
+            img{
+                animation-name: pulse;
+                animation-duration: .75s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    &:active, &:focus{
         img{
             animation-name: pulse;
             animation-duration: .75s;
@@ -145,7 +169,7 @@
         background: none;
 
         @extend .anim-pop;
-        &:hover{
+        &:hover, &:active, &:focus{
             cursor: auto;
         }
     }
@@ -160,7 +184,7 @@
 
         @extend .anim-none;
         
-        &:hover{
+        &:hover, &:active, &:focus{
             cursor: pointer;
         }
     }

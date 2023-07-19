@@ -5,7 +5,14 @@
 .anim-none, .gallery .portrait, .featured .portrait {
   transition: none;
 }
-.anim-none:hover, .gallery .portrait:hover, .featured .portrait:hover, .anim-none:focus, .gallery .portrait:focus, .featured .portrait:focus {
+@media (hover: hover) {
+  .anim-none:hover, .gallery .portrait:hover, .featured .portrait:hover {
+    cursor: auto;
+    transform: none;
+    transition: none;
+  }
+}
+.anim-none:active, .gallery .portrait:active, .featured .portrait:active, .anim-none:focus, .gallery .portrait:focus, .featured .portrait:focus {
   cursor: auto;
   transform: none;
   transition: none;
@@ -14,7 +21,14 @@
 .anim-pop, .icons img, .buy h3, .featured .game, .profile a, .cart a, .logo {
   transition: 0.125s;
 }
-.anim-pop:hover, .icons img:hover, .buy h3:hover, .featured .game:hover, .profile a:hover, .cart a:hover, .logo:hover, .anim-pop:focus, .icons img:focus, .buy h3:focus, .featured .game:focus, .profile a:focus, .cart a:focus, .logo:focus {
+@media (hover: hover) {
+  .anim-pop:hover, .icons img:hover, .buy h3:hover, .featured .game:hover, .profile a:hover, .cart a:hover, .logo:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    transition: 0.25s;
+  }
+}
+.anim-pop:active, .icons img:active, .buy h3:active, .featured .game:active, .profile a:active, .cart a:active, .logo:active, .anim-pop:focus, .icons img:focus, .buy h3:focus, .featured .game:focus, .profile a:focus, .cart a:focus, .logo:focus {
   cursor: pointer;
   transform: scale(1.04);
   transition: 0.25s;
@@ -23,7 +37,15 @@
 .anim-pop-shadow, .loginInput input, .login #btLogin, .signup #btLogin, .buyButton, .delete, .cartGames .game, .description .categories p, .selector img, .addButton, .portrait, .search {
   transition: 0.125s;
 }
-.anim-pop-shadow:hover, .loginInput input:hover, .login #btLogin:hover, .signup #btLogin:hover, .buyButton:hover, .delete:hover, .cartGames .game:hover, .description .categories p:hover, .selector img:hover, .addButton:hover, .portrait:hover, .search:hover, .anim-pop-shadow:focus, .loginInput input:focus, .login #btLogin:focus, .signup #btLogin:focus, .buyButton:focus, .delete:focus, .cartGames .game:focus, .description .categories p:focus, .selector img:focus, .addButton:focus, .portrait:focus, .search:focus {
+@media (hover: hover) {
+  .anim-pop-shadow:hover, .loginInput input:hover, .login #btLogin:hover, .signup #btLogin:hover, .buyButton:hover, .delete:hover, .cartGames .game:hover, .description .categories p:hover, .selector img:hover, .addButton:hover, .portrait:hover, .search:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(1.04);
+    transition: 0.25s;
+  }
+}
+.anim-pop-shadow:active, .loginInput input:active, .login #btLogin:active, .signup #btLogin:active, .buyButton:active, .delete:active, .cartGames .game:active, .description .categories p:active, .selector img:active, .addButton:active, .portrait:active, .search:active, .anim-pop-shadow:focus, .loginInput input:focus, .login #btLogin:focus, .signup #btLogin:focus, .buyButton:focus, .delete:focus, .cartGames .game:focus, .description .categories p:focus, .selector img:focus, .addButton:focus, .portrait:focus, .search:focus {
   cursor: pointer;
   box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
   transform: scale(1.04);
@@ -33,7 +55,15 @@
 .anim-pop-light {
   transition: 0.125s;
 }
-.anim-pop-light:hover, .anim-pop-light:focus {
+@media (hover: hover) {
+  .anim-pop-light:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);
+    transform: scale(1.04);
+    transition: 0.25s;
+  }
+}
+.anim-pop-light:active, .anim-pop-light:focus {
   cursor: pointer;
   box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.25);
   transform: scale(1.04);
@@ -237,7 +267,13 @@ footer {
   background-color: #5B6171;
   border-radius: 10px;
 }
-.search:hover i {
+@media (hover: hover) {
+  .search:hover i {
+    animation-name: swing;
+    animation-duration: 1s;
+  }
+}
+.search:active i, .search:focus i {
   animation-name: swing;
   animation-duration: 1s;
 }
@@ -277,7 +313,14 @@ footer {
 .cart a p {
   margin: 0;
 }
-.cart a:hover img {
+@media (hover: hover) {
+  .cart a:hover img {
+    animation-name: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+.cart a:active img, .cart a:focus img {
   animation-name: swing;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -301,7 +344,14 @@ footer {
 .profile a p {
   margin: 0;
 }
-.profile a:hover img {
+@media (hover: hover) {
+  .profile a:hover img {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+.profile a:active img, .profile a:focus img {
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -383,7 +433,13 @@ footer {
   font-family: Rubik Medium;
   font-weight: 500;
 }
-.off:hover {
+@media (hover: hover) {
+  .off:hover {
+    animation-name: tada-1;
+    animation-duration: 0.75s;
+  }
+}
+.off:active, .off:focus {
   animation-name: tada-1;
   animation-duration: 0.75s;
 }
@@ -407,7 +463,13 @@ footer {
   color: #5B6171;
   text-decoration: line-through;
 }
-.noOff:hover {
+@media (hover: hover) {
+  .noOff:hover {
+    animation-name: headShake;
+    animation-duration: 1s;
+  }
+}
+.noOff:active, .noOff:focus {
   animation-name: headShake;
   animation-duration: 1s;
 }
@@ -445,7 +507,14 @@ footer {
   background-color: #725AC1;
   border-radius: 10px;
 }
-.addButton:hover img {
+@media (hover: hover) {
+  .addButton:hover img {
+    animation-name: pulse;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+  }
+}
+.addButton:active img, .addButton:focus img {
   animation-name: pulse;
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
@@ -476,7 +545,7 @@ footer {
   margin-bottom: 3em;
   background: none;
 }
-.featured .game:hover {
+.featured .game:hover, .featured .game:active, .featured .game:focus {
   cursor: auto;
 }
 .featured .portrait {
@@ -484,7 +553,7 @@ footer {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.featured .portrait:hover {
+.featured .portrait:hover, .featured .portrait:active, .featured .portrait:focus {
   cursor: pointer;
 }
 .featured .info {
@@ -976,7 +1045,14 @@ datalist option {
   background-color: #101114;
   border-radius: 10px;
 }
-.delete:hover img {
+@media (hover: hover) {
+  .delete:hover img {
+    animation-name: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+.delete:active img, .delete:focus img {
   animation-name: swing;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -1137,7 +1213,13 @@ datalist option {
   color: #5B6171;
   font-family: Montserrat;
 }
-.author:hover {
+@media (hover: hover) {
+  .author:hover {
+    animation-name: tada;
+    animation-duration: 1s;
+  }
+}
+.author:active, .author:focus {
   animation-name: tada;
   animation-duration: 1s;
 }

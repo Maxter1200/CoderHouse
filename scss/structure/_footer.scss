@@ -13,7 +13,15 @@
     color: $color-secondary;
     font-family: Montserrat;
 
-    &:hover{
+    @media (hover: hover){
+
+        &:hover{
+            animation-name: tada;
+            animation-duration: 1s;
+        }
+    }
+
+    &:active, &:focus{
         animation-name: tada;
         animation-duration: 1s;
     }
