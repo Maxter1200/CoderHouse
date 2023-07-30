@@ -76,7 +76,7 @@
     justify-content: space-between;
     gap: 1em;
 
-    margin-top: 1em;
+    padding-top: 1em;
 
     overflow-x: scroll;
     overflow-y: hidden;
@@ -190,9 +190,10 @@
         
         width: 100%;
 
+        padding: .5em;
+        padding-bottom: .75em;
+
         p{
-            margin-bottom: .5em;
-        
             padding: .5em 1em;
         
             border-radius: 30px;

@@ -937,7 +937,7 @@ datalist option {
   display: flex;
   justify-content: space-between;
   gap: 1em;
-  margin-top: 1em;
+  padding-top: 1em;
   overflow-x: scroll;
   overflow-y: hidden;
   animation-name: anim-fade-up;
@@ -1329,9 +1329,10 @@ datalist option {
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
+  padding: 0.5em;
+  padding-bottom: 0.75em;
 }
 .description .categories p {
-  margin-bottom: 0.5em;
   padding: 0.5em 1em;
   border-radius: 30px;
   background-color: #090A0B;
