@@ -22,9 +22,11 @@
 }
 
 .cartGames{
-    @include flex(col, none, none, nowrap);
+    @include flex(col, between, none, nowrap);
+    gap: 1em;
 
     overflow-y: scroll;
+    overflow-x: hidden;
 
     width: 100%;
 
@@ -37,7 +39,7 @@
     
         width: 95%;
     
-        margin: 1em auto;
+        margin: 0 auto;
 
         @extend .anim-pop-shadow;
 

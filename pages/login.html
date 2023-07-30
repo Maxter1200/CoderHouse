@@ -14,6 +14,7 @@
     <meta name="keywords" content="VIDEOJUEGOS, JUEGOS, INICIO, INICIAR, SESIÓN, CORREO, USUARIO, CONTRASEÑA">
     <meta name="description" content="Pagina donde se inicia sesión usando una cuenta ya registrada.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101114">
     <title>Iniciar Sesión - ZENITH</title>
 </head>
 <body>
@@ -33,7 +34,17 @@
                 </li>
                 <span class="col-1"></span> <!-- Espaciado -->
                 <li class="cart col-2"><a href="carrito.html"><img src="../res/icon/shop.png" alt="Icono Carrito"><p>Carrito</p></a></li> <!-- Carrito de Compras -->
-                <li class="profile col-2"><a href="login.html"><img src="../res/icon/profile.png" alt="Icono Perfil"><p>Perfil</p></a></li> <!-- Perfil de Usuario -->
+                <!-- Perfil de Usuario -->
+                <li class="dropdown col-2" data-bs-theme="dark">
+                    <div class="profile" data-bs-toggle="dropdown">
+                        <img src="../res/icon/profile.png" alt="Icono Perfil">
+                        <p>Perfil</p>
+                    </div>
+                    <ul class="dropdown-menu" style="min-width: 0;">
+                        <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="signup.html">Registrarse</a></li>
+                    </ul>
+                </li> 
             </ul>
         </nav>
     </header>

@@ -54,3 +54,13 @@
         flex-wrap: nowrap;
     }
 }
+
+@mixin gallery($juego, $cant){
+    img{
+        @for $i from 1 through $cant{
+            &:nth-child(#{$i}){
+                content: url("../res/img/gallery/#{$juego}/#{$i}.jpg");
+            }
+        }
+    }
+}

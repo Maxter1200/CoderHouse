@@ -8,6 +8,28 @@
         font-family: Rubik Medium;
         font-size: map-get($font-size, m) !important;
     }
+
+    .dropdown-menu{
+        min-width: 0;
+
+        background-color: $color-bg-secondary;
+        border: none;
+
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 0px;
+        a{
+            padding: .5em .75em;
+
+            color: $color-white;
+
+            &:hover, &:focus{
+                background-color: $color-secondary;
+            }
+
+            &:active{
+                background-color: $color-primary;
+            }
+        }
+    }
 }
 
 .logo{
@@ -101,37 +123,35 @@
 }
 
 .profile{
-    a{
-        @include flex(row, start, center, nowrap);
+    @include flex(row, start, center, nowrap);
 
-        img{
-            margin-right: .75em;
-        
-            height: calc(2.5em - 2px);
-        }
+    img{
+        margin-right: .75em;
+    
+        height: calc(2.5em - 2px);
+    }
 
-        p{
-            margin: 0;
-        }
+    p{
+        margin: 0;
+    }
 
-        @extend .anim-pop;
+    @extend .anim-pop;
 
-        @media (hover: hover){
-            &:hover{
-                img{
-                    animation-name: pulse;
-                    animation-duration: 1s;
-                    animation-iteration-count: infinite;
-                }
-            }
-        }
-
-        &:active, &:focus{
+    @media (hover: hover){
+        &:hover{
             img{
                 animation-name: pulse;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
             }
+        }
+    }
+
+    &:active, &:focus{
+        img{
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
         }
     }
 }

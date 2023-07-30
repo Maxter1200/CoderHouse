@@ -18,17 +18,17 @@
   transition: none;
 }
 
-.anim-pop, .icons img, .buy h3, .featured .game, .profile a, .cart a, .logo {
+.anim-pop, .icons img, .buy h3, .profile, .cart a, .logo {
   transition: 0.125s;
 }
 @media (hover: hover) {
-  .anim-pop:hover, .icons img:hover, .buy h3:hover, .featured .game:hover, .profile a:hover, .cart a:hover, .logo:hover {
+  .anim-pop:hover, .icons img:hover, .buy h3:hover, .profile:hover, .cart a:hover, .logo:hover {
     cursor: pointer;
     transform: scale(1.04);
     transition: 0.25s;
   }
 }
-.anim-pop:active, .icons img:active, .buy h3:active, .featured .game:active, .profile a:active, .cart a:active, .logo:active, .anim-pop:focus, .icons img:focus, .buy h3:focus, .featured .game:focus, .profile a:focus, .cart a:focus, .logo:focus {
+.anim-pop:active, .icons img:active, .buy h3:active, .profile:active, .cart a:active, .logo:active, .anim-pop:focus, .icons img:focus, .buy h3:focus, .profile:focus, .cart a:focus, .logo:focus {
   cursor: pointer;
   transform: scale(1.04);
   transition: 0.25s;
@@ -163,6 +163,7 @@
   }
 }
 h1 {
+  white-space: nowrap;
   margin: 0;
   font-size: 2.5rem;
   font-weight: 500;
@@ -201,14 +202,14 @@ a {
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0.625em;
+  height: 0.625em;
   background-color: #101114;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  margin: 25px;
+  margin: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -246,6 +247,19 @@ footer {
   background-color: #101114;
 }
 
+.topSection {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1200px) {
+  .topSection {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+}
 /* HEADER */
 .menu {
   margin: 0;
@@ -255,6 +269,22 @@ footer {
   color: #fcfcfc;
   font-family: Rubik Medium;
   font-size: 1.25rem !important;
+}
+.menu .dropdown-menu {
+  min-width: 0;
+  background-color: #101114;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 0px;
+}
+.menu .dropdown-menu a {
+  padding: 0.5em 0.75em;
+  color: #fcfcfc;
+}
+.menu .dropdown-menu a:hover, .menu .dropdown-menu a:focus {
+  background-color: #5B6171;
+}
+.menu .dropdown-menu a:active {
+  background-color: #725AC1;
 }
 
 .logo {
@@ -326,7 +356,7 @@ footer {
   animation-iteration-count: infinite;
 }
 
-.profile a {
+.profile {
   display: flex;
   /* CONDICIONAL PARA DIRECTION */
   flex-direction: row;
@@ -337,21 +367,21 @@ footer {
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
 }
-.profile a img {
+.profile img {
   margin-right: 0.75em;
   height: calc(2.5em - 2px);
 }
-.profile a p {
+.profile p {
   margin: 0;
 }
 @media (hover: hover) {
-  .profile a:hover img {
+  .profile:hover img {
     animation-name: pulse;
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
 }
-.profile a:active img, .profile a:focus img {
+.profile:active img, .profile:focus img {
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -374,7 +404,6 @@ footer {
 /* PAGINA INDEX */
 .game {
   display: flex;
-  margin: 0.5em 0;
   padding: 1em;
   width: 100%;
   background-color: #101114;
@@ -383,7 +412,8 @@ footer {
 
 .portrait {
   padding: 0;
-  height: auto;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -458,6 +488,7 @@ footer {
 }
 
 .noOff {
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   color: #5B6171;
@@ -489,6 +520,7 @@ footer {
   border-radius: 10px;
 }
 .priceBox p {
+  white-space: nowrap;
   font-family: Rubik Medium;
   font-weight: 500;
 }
@@ -529,6 +561,7 @@ footer {
 .featured {
   animation-name: anim-fade-down;
   animation-duration: 1s;
+  margin-bottom: 3em;
 }
 .featured .game {
   display: flex;
@@ -540,13 +573,53 @@ footer {
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
   margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
+  width: 98%;
   height: 90%;
-  margin-bottom: 3em;
   background: none;
+  transition: 0.125s;
+}
+@media (hover: hover) {
+  .featured .game:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.25s;
+  }
+}
+.featured .game:active, .featured .game:focus {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.25s;
 }
 .featured .game:hover, .featured .game:active, .featured .game:focus {
   cursor: auto;
+}
+.featured .carousel-indicators {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25%;
+  bottom: -3em;
+}
+.featured .carousel-indicators button {
+  width: 0.5em;
+  height: 0.5em;
+  opacity: 1;
+  border: 0.175em solid white;
+  border-radius: 100%;
+  background-color: #090A0B;
+}
+.featured .carousel-indicators .carousel-control-prev, .featured .carousel-indicators .carousel-control-next {
+  position: static;
+  width: 1.25em;
+  height: 2.825em;
+  border: none;
+  border-radius: none;
+  background: none;
+}
+.featured .carousel-indicators .active {
+  background-color: #725AC1;
 }
 .featured .portrait {
   width: 100%;
@@ -574,7 +647,6 @@ footer {
 }
 
 .bestSellers {
-  margin-bottom: 3em;
   animation-name: anim-fade-down;
   animation-duration: 1s;
 }
@@ -588,12 +660,12 @@ footer {
   /* CONDICIONAL PARA ITEMS */
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
+  gap: 1em;
   margin-top: 1em;
-  height: 90%;
 }
 
 .split {
-  margin-bottom: 3em;
+  margin: 3em 0;
   border: 3px solid #101114;
   border-radius: 5px;
   color: #101114;
@@ -800,7 +872,7 @@ datalist option {
   padding: 0;
 }
 .gamePage .addButton {
-  padding: 0.5em 0.75em;
+  padding: 0.75em 1em;
 }
 .gamePage .addButton p {
   font-size: 1rem;
@@ -822,57 +894,366 @@ datalist option {
   /* CONDICIONAL PARA ITEMS */
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
-  height: 100%;
+  height: 80%;
   margin-top: 1em;
 }
 .gallery .portrait {
   height: auto;
-  margin-bottom: 0.75em;
   animation-name: anim-fade-right;
   animation-duration: 1s;
 }
 
 .selector {
   display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 1em;
   overflow-x: scroll;
-  overflow-y: none;
+  overflow-y: hidden;
   animation-name: anim-fade-up;
   animation-duration: 1s;
 }
 .selector img {
-  margin: 0.75em;
+  margin-bottom: 0.75em;
   height: 4.5em;
   border-radius: 5px;
 }
-.selector img:nth-child(1) {
-  content: url("../res/img/gallery/gta1.jpg");
+.selector::-webkit-scrollbar-track {
+  margin: 0;
 }
-.selector img:nth-child(2) {
-  content: url("../res/img/gallery/gta2.jpg");
+
+#gta img:nth-child(1) {
+  content: url("../res/img/gallery/gta/1.jpg");
 }
-.selector img:nth-child(3) {
-  content: url("../res/img/gallery/gta3.jpg");
+#gta img:nth-child(2) {
+  content: url("../res/img/gallery/gta/2.jpg");
 }
-.selector img:nth-child(4) {
-  content: url("../res/img/gallery/gta4.jpg");
+#gta img:nth-child(3) {
+  content: url("../res/img/gallery/gta/3.jpg");
 }
-.selector img:nth-child(5) {
-  content: url("../res/img/gallery/gta5.jpg");
+#gta img:nth-child(4) {
+  content: url("../res/img/gallery/gta/4.jpg");
 }
-.selector img:nth-child(6) {
-  content: url("../res/img/gallery/gta6.jpg");
+#gta img:nth-child(5) {
+  content: url("../res/img/gallery/gta/5.jpg");
 }
-.selector img:nth-child(7) {
-  content: url("../res/img/gallery/gta7.jpg");
+#gta img:nth-child(6) {
+  content: url("../res/img/gallery/gta/6.jpg");
 }
-.selector img:nth-child(8) {
-  content: url("../res/img/gallery/gta8.jpg");
+#gta img:nth-child(7) {
+  content: url("../res/img/gallery/gta/7.jpg");
 }
-.selector img:nth-child(9) {
-  content: url("../res/img/gallery/gta9.jpg");
+#gta img:nth-child(8) {
+  content: url("../res/img/gallery/gta/8.jpg");
 }
-.selector img:nth-child(10) {
-  content: url("../res/img/gallery/gta10.jpg");
+#gta img:nth-child(9) {
+  content: url("../res/img/gallery/gta/9.jpg");
+}
+#gta img:nth-child(10) {
+  content: url("../res/img/gallery/gta/10.jpg");
+}
+
+#cod img:nth-child(1) {
+  content: url("../res/img/gallery/cod/1.jpg");
+}
+#cod img:nth-child(2) {
+  content: url("../res/img/gallery/cod/2.jpg");
+}
+#cod img:nth-child(3) {
+  content: url("../res/img/gallery/cod/3.jpg");
+}
+#cod img:nth-child(4) {
+  content: url("../res/img/gallery/cod/4.jpg");
+}
+#cod img:nth-child(5) {
+  content: url("../res/img/gallery/cod/5.jpg");
+}
+#cod img:nth-child(6) {
+  content: url("../res/img/gallery/cod/6.jpg");
+}
+#cod img:nth-child(7) {
+  content: url("../res/img/gallery/cod/7.jpg");
+}
+#cod img:nth-child(8) {
+  content: url("../res/img/gallery/cod/8.jpg");
+}
+
+#dead-island img:nth-child(1) {
+  content: url("../res/img/gallery/dead-island/1.jpg");
+}
+#dead-island img:nth-child(2) {
+  content: url("../res/img/gallery/dead-island/2.jpg");
+}
+#dead-island img:nth-child(3) {
+  content: url("../res/img/gallery/dead-island/3.jpg");
+}
+#dead-island img:nth-child(4) {
+  content: url("../res/img/gallery/dead-island/4.jpg");
+}
+#dead-island img:nth-child(5) {
+  content: url("../res/img/gallery/dead-island/5.jpg");
+}
+#dead-island img:nth-child(6) {
+  content: url("../res/img/gallery/dead-island/6.jpg");
+}
+#dead-island img:nth-child(7) {
+  content: url("../res/img/gallery/dead-island/7.jpg");
+}
+#dead-island img:nth-child(8) {
+  content: url("../res/img/gallery/dead-island/8.jpg");
+}
+#dead-island img:nth-child(9) {
+  content: url("../res/img/gallery/dead-island/9.jpg");
+}
+#dead-island img:nth-child(10) {
+  content: url("../res/img/gallery/dead-island/10.jpg");
+}
+
+#battlefield img:nth-child(1) {
+  content: url("../res/img/gallery/battlefield/1.jpg");
+}
+#battlefield img:nth-child(2) {
+  content: url("../res/img/gallery/battlefield/2.jpg");
+}
+#battlefield img:nth-child(3) {
+  content: url("../res/img/gallery/battlefield/3.jpg");
+}
+#battlefield img:nth-child(4) {
+  content: url("../res/img/gallery/battlefield/4.jpg");
+}
+#battlefield img:nth-child(5) {
+  content: url("../res/img/gallery/battlefield/5.jpg");
+}
+#battlefield img:nth-child(6) {
+  content: url("../res/img/gallery/battlefield/6.jpg");
+}
+
+#hogwarts img:nth-child(1) {
+  content: url("../res/img/gallery/hogwarts/1.jpg");
+}
+#hogwarts img:nth-child(2) {
+  content: url("../res/img/gallery/hogwarts/2.jpg");
+}
+#hogwarts img:nth-child(3) {
+  content: url("../res/img/gallery/hogwarts/3.jpg");
+}
+#hogwarts img:nth-child(4) {
+  content: url("../res/img/gallery/hogwarts/4.jpg");
+}
+#hogwarts img:nth-child(5) {
+  content: url("../res/img/gallery/hogwarts/5.jpg");
+}
+#hogwarts img:nth-child(6) {
+  content: url("../res/img/gallery/hogwarts/6.jpg");
+}
+#hogwarts img:nth-child(7) {
+  content: url("../res/img/gallery/hogwarts/7.jpg");
+}
+#hogwarts img:nth-child(8) {
+  content: url("../res/img/gallery/hogwarts/8.jpg");
+}
+#hogwarts img:nth-child(9) {
+  content: url("../res/img/gallery/hogwarts/9.jpg");
+}
+#hogwarts img:nth-child(10) {
+  content: url("../res/img/gallery/hogwarts/10.jpg");
+}
+
+#cyberpunk img:nth-child(1) {
+  content: url("../res/img/gallery/cyber/1.jpg");
+}
+#cyberpunk img:nth-child(2) {
+  content: url("../res/img/gallery/cyber/2.jpg");
+}
+#cyberpunk img:nth-child(3) {
+  content: url("../res/img/gallery/cyber/3.jpg");
+}
+#cyberpunk img:nth-child(4) {
+  content: url("../res/img/gallery/cyber/4.jpg");
+}
+#cyberpunk img:nth-child(5) {
+  content: url("../res/img/gallery/cyber/5.jpg");
+}
+#cyberpunk img:nth-child(6) {
+  content: url("../res/img/gallery/cyber/6.jpg");
+}
+#cyberpunk img:nth-child(7) {
+  content: url("../res/img/gallery/cyber/7.jpg");
+}
+#cyberpunk img:nth-child(8) {
+  content: url("../res/img/gallery/cyber/8.jpg");
+}
+#cyberpunk img:nth-child(9) {
+  content: url("../res/img/gallery/cyber/9.jpg");
+}
+#cyberpunk img:nth-child(10) {
+  content: url("../res/img/gallery/cyber/10.jpg");
+}
+
+#redead img:nth-child(1) {
+  content: url("../res/img/gallery/redead/1.jpg");
+}
+#redead img:nth-child(2) {
+  content: url("../res/img/gallery/redead/2.jpg");
+}
+#redead img:nth-child(3) {
+  content: url("../res/img/gallery/redead/3.jpg");
+}
+#redead img:nth-child(4) {
+  content: url("../res/img/gallery/redead/4.jpg");
+}
+#redead img:nth-child(5) {
+  content: url("../res/img/gallery/redead/5.jpg");
+}
+#redead img:nth-child(6) {
+  content: url("../res/img/gallery/redead/6.jpg");
+}
+#redead img:nth-child(7) {
+  content: url("../res/img/gallery/redead/7.jpg");
+}
+#redead img:nth-child(8) {
+  content: url("../res/img/gallery/redead/8.jpg");
+}
+
+#fifa img:nth-child(1) {
+  content: url("../res/img/gallery/fifa/1.jpg");
+}
+#fifa img:nth-child(2) {
+  content: url("../res/img/gallery/fifa/2.jpg");
+}
+#fifa img:nth-child(3) {
+  content: url("../res/img/gallery/fifa/3.jpg");
+}
+#fifa img:nth-child(4) {
+  content: url("../res/img/gallery/fifa/4.jpg");
+}
+#fifa img:nth-child(5) {
+  content: url("../res/img/gallery/fifa/5.jpg");
+}
+#fifa img:nth-child(6) {
+  content: url("../res/img/gallery/fifa/6.jpg");
+}
+#fifa img:nth-child(7) {
+  content: url("../res/img/gallery/fifa/7.jpg");
+}
+#fifa img:nth-child(8) {
+  content: url("../res/img/gallery/fifa/8.jpg");
+}
+#fifa img:nth-child(9) {
+  content: url("../res/img/gallery/fifa/9.jpg");
+}
+#fifa img:nth-child(10) {
+  content: url("../res/img/gallery/fifa/10.jpg");
+}
+
+#street-f img:nth-child(1) {
+  content: url("../res/img/gallery/street-f/1.jpg");
+}
+#street-f img:nth-child(2) {
+  content: url("../res/img/gallery/street-f/2.jpg");
+}
+#street-f img:nth-child(3) {
+  content: url("../res/img/gallery/street-f/3.jpg");
+}
+#street-f img:nth-child(4) {
+  content: url("../res/img/gallery/street-f/4.jpg");
+}
+#street-f img:nth-child(5) {
+  content: url("../res/img/gallery/street-f/5.jpg");
+}
+#street-f img:nth-child(6) {
+  content: url("../res/img/gallery/street-f/6.jpg");
+}
+#street-f img:nth-child(7) {
+  content: url("../res/img/gallery/street-f/7.jpg");
+}
+#street-f img:nth-child(8) {
+  content: url("../res/img/gallery/street-f/8.jpg");
+}
+
+#elder img:nth-child(1) {
+  content: url("../res/img/gallery/elder/1.jpg");
+}
+#elder img:nth-child(2) {
+  content: url("../res/img/gallery/elder/2.jpg");
+}
+#elder img:nth-child(3) {
+  content: url("../res/img/gallery/elder/3.jpg");
+}
+#elder img:nth-child(4) {
+  content: url("../res/img/gallery/elder/4.jpg");
+}
+#elder img:nth-child(5) {
+  content: url("../res/img/gallery/elder/5.jpg");
+}
+#elder img:nth-child(6) {
+  content: url("../res/img/gallery/elder/6.jpg");
+}
+
+#watch img:nth-child(1) {
+  content: url("../res/img/gallery/watch/1.jpg");
+}
+#watch img:nth-child(2) {
+  content: url("../res/img/gallery/watch/2.jpg");
+}
+#watch img:nth-child(3) {
+  content: url("../res/img/gallery/watch/3.jpg");
+}
+#watch img:nth-child(4) {
+  content: url("../res/img/gallery/watch/4.jpg");
+}
+#watch img:nth-child(5) {
+  content: url("../res/img/gallery/watch/5.jpg");
+}
+
+#outlast img:nth-child(1) {
+  content: url("../res/img/gallery/outlast/1.jpg");
+}
+#outlast img:nth-child(2) {
+  content: url("../res/img/gallery/outlast/2.jpg");
+}
+#outlast img:nth-child(3) {
+  content: url("../res/img/gallery/outlast/3.jpg");
+}
+#outlast img:nth-child(4) {
+  content: url("../res/img/gallery/outlast/4.jpg");
+}
+#outlast img:nth-child(5) {
+  content: url("../res/img/gallery/outlast/5.jpg");
+}
+#outlast img:nth-child(6) {
+  content: url("../res/img/gallery/outlast/6.jpg");
+}
+#outlast img:nth-child(7) {
+  content: url("../res/img/gallery/outlast/7.jpg");
+}
+#outlast img:nth-child(8) {
+  content: url("../res/img/gallery/outlast/8.jpg");
+}
+#outlast img:nth-child(9) {
+  content: url("../res/img/gallery/outlast/9.jpg");
+}
+#outlast img:nth-child(10) {
+  content: url("../res/img/gallery/outlast/10.jpg");
+}
+
+#dying img:nth-child(1) {
+  content: url("../res/img/gallery/dying/1.jpg");
+}
+#dying img:nth-child(2) {
+  content: url("../res/img/gallery/dying/2.jpg");
+}
+#dying img:nth-child(3) {
+  content: url("../res/img/gallery/dying/3.jpg");
+}
+#dying img:nth-child(4) {
+  content: url("../res/img/gallery/dying/4.jpg");
+}
+#dying img:nth-child(5) {
+  content: url("../res/img/gallery/dying/5.jpg");
+}
+#dying img:nth-child(6) {
+  content: url("../res/img/gallery/dying/6.jpg");
 }
 
 .description {
@@ -885,9 +1266,9 @@ datalist option {
   align-items: flex-start;
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
+  gap: 1em;
   margin-top: 1em;
   padding: 10%;
-  height: 85%;
   background-color: #101114;
   border-radius: 15px;
   animation-name: anim-fade-left;
@@ -909,29 +1290,26 @@ datalist option {
   /* CONDICIONAL PARA DIRECTION */
   flex-direction: row;
   /* CONDICIONAL PARA JUSTIFY */
+  justify-content: space-between;
   /* CONDICIONAL PARA ITEMS */
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
+  gap: 1em;
   white-space: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
 }
 .description .categories p {
-  margin: 0.5em;
+  margin-bottom: 0.5em;
   padding: 0.5em 1em;
   border-radius: 30px;
   background-color: #090A0B;
 }
-.description .categories p:first-child {
-  margin-left: auto;
-}
-.description .categories p:last-child {
-  margin-right: auto;
-}
 
 .descText {
   overflow-y: scroll;
-  height: 30%;
+  height: 6em;
 }
 
 .developer {
@@ -990,10 +1368,13 @@ datalist option {
   /* CONDICIONAL PARA DIRECTION */
   flex-direction: column;
   /* CONDICIONAL PARA JUSTIFY */
+  justify-content: space-between;
   /* CONDICIONAL PARA ITEMS */
   /* CONDICIONAL PARA WRAP */
   flex-wrap: nowrap;
+  gap: 1em;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 60%;
 }
@@ -1008,7 +1389,7 @@ datalist option {
   flex-wrap: nowrap;
   background-color: #5B6171;
   width: 95%;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 .cartGames .game:first-child {
   margin-top: auto;

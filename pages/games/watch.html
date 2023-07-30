@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="../../res/icon/icon.png"/>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/626b2508df.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="VIDEOJUEGOS, JUEGOS, DESCRIPCIÓN, INFORMACIÓN, PRECIO, IMÁGENES">
+    <meta name="description" content="Página de información acerca del juego.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101114">
+    <title>Watch Dogs 2 - ZENITH</title>
+</head>
+<body>
+    <!-- Cabecera de la Página -->
+    <header>
+        <!-- Menú de Navegación -->
+        <nav class="container">
+            <ul class="menu row">
+                <li class="col-2"><a href="../../index.html"><img class="logo" src="../../res/icon/logo.png" alt="Logo ZENITH"></a></li> <!-- Inicio/Logo -->
+                <span class="col-1"></span> <!-- Espaciado -->
+                <!-- Barra de Búsqueda -->
+                <li class="col-4"> 
+                    <form class="search">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                        <input class="searchBox" type="text" id="searchBar" placeholder="Buscar">
+                    </form> 
+                </li>
+                <span class="col-1"></span> <!-- Espaciado -->
+                <li class="cart col-2"><a href="../carrito.html"><img src="../../res/icon/shop.png" alt="Icono Carrito"><p>Carrito</p></a></li> <!-- Carrito de Compras -->
+                <!-- Perfil de Usuario -->
+                <li class="dropdown col-2" data-bs-theme="dark">
+                    <div class="profile" data-bs-toggle="dropdown">
+                        <img src="../../res/icon/profile.png" alt="Icono Perfil">
+                        <p>Perfil</p>
+                    </div>
+                    <ul class="dropdown-menu" style="min-width: 0;">
+                        <li><a class="dropdown-item" href="../login.html">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="../signup.html">Registrarse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido de la Página -->
+    <main>
+        <div class="gamePage container">
+            <!-- Sección de Información del Juego -->
+            <section class="topSection row">
+                <!-- Galería de Imágenes de muestra -->
+                <article class="col-xl-6 col-lg-9">
+                    <!-- Titulo del Juego -->
+                    <h1>Watch Dogs 2</h1>
+                    <div class="gallery">
+                        <!-- Display de Imágenes -->
+                        <img src="../../res/img/watch.jpg" alt="Portada" class="portrait">
+                        <!-- Selector de Imágenes -->
+                        <div class="selector" id="watch">
+                            <img alt="Imagen 1 de Watch Dogs 2">
+                            <img alt="Imagen 2 de Watch Dogs 2">
+                            <img alt="Imagen 3 de Watch Dogs 2">
+                            <img alt="Imagen 4 de Watch Dogs 2">
+                            <img alt="Imagen 5 de Watch Dogs 2">
+                        </div>
+                    </div>
+                </article>
+                <span class="col-1"></span> <!-- Espaciado-->
+                <!-- Información del Juego -->
+                <article class="col-xl-5 col-lg-9">
+                    <h2>Información</h2>
+                    <div class="description">
+                        <!-- Descripción del Juego -->
+                        <h3>Descripción</h3>
+                        <div class="descText">
+                            <p>Forme un equipo con Dedsec, un notorio grupo de piratas informáticos, para ejecutar el mayor ataque de la historia; acabar con ctOS 2.0, un sistema operativo invasivo que utilizan los cerebros criminales para monitorear y manipular a los ciudadanos a gran escala.</p>
+                        </div>
+                        <!-- Desarrollador del Juego -->
+                        <div class="developer">
+                            <h4>Desarrollador</h4>
+                            <p>Ubisoft</p>
+                        </div>
+                        <!-- Fecha de lanzamiento del Juego -->
+                        <div class="date">
+                            <h4>Fecha de lanzamiento</h4>
+                            <p>29/11/2016</p>
+                        </div>
+                        <!-- Géneros/Categorías del Juego -->
+                        <h4>Géneros</h4>
+                        <div class="categories">
+                            <p>Acción</p>
+                            <p>Mundo Abierto</p>
+                            <p>Parkour</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <hr class="split row"> <!-- Separador -->
+            <!-- Sección de Adquisición del Juego -->
+            <section class="row d-flex justify-content-center container m-0 p-0">
+                <div class="price offset-xl-6 col-xl-6 col-lg-9 col-md-10 row">
+                    <!-- Porcentaje de Descuento -->
+                    <p class="off col-3">-85%</p>
+                    <!-- Precio del Juego sin Descuento -->
+                    <p class="noOff col-3">60 US$</p>
+                    <!-- Precio del Juego y Botón de Añadir -->
+                    <div class="priceBox col-6">
+                        <p>7,5 US$</p>
+                        <a href="carrito.html" class="addButton">
+                            <img src="../../res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                            <p>Agregar</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <section class="container">
+            <article class="row">
+                <!-- Marca -->
+                <div class="watermark col-6">
+                    <h2 class="brand">ZENITH</h2>
+                    <p class="author">Diseñado por Matías Vivas</p>
+                </div>
+                <span class="col-1"></span>
+                <!-- Formas y Redes de contacto -->
+                <div class="contact col-5">
+                    <h2>Contacto</h2>
+                    <div class="icons">
+                        <img src="../../res/icon/facebook.png" alt="Icono Facebook">
+                        <img src="../../res/icon/instagram.png" alt="Icono Instagram">
+                        <img src="../../res/icon/twitter.png" alt="Icono Twitter">
+                        <img src="../../res/icon/phone.png" alt="Icono Teléfono">
+                    </div>
+                </div>
+            </article>
+            <article class="row">
+                <!-- Aclaración -->
+                <div class="disclaimer col-12">
+                    <p><u>Disclaimer</u>: ZENITH es una marca ficticia de distribución de videojuegos y no tiene ningún tipo de sitio web oficial, esto solo es un prototipo de sitio web que se podría adaptar a algún comercio de venta de videojuegos. Este sitio web no cuenta con la funcionalidad de compra de videojuegos, las funcionalidades mostradas en el sitio solo son ilustrativas y no hay ninguna forma de poder adquirir un videojuego mediante la compra de este por medio del sitio web. Los precios mostrados en el sitio web no son reales, solo están puestos para mostrar las capacidades del sitio.</p>
+                </div>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>

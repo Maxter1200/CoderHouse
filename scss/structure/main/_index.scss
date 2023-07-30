@@ -1,8 +1,6 @@
 .game{
     display: flex;
 
-    margin: .5em 0;
-
     padding: 1em;
 
     width: 100%;
@@ -14,7 +12,8 @@
 .portrait{
     padding: 0;
 
-    height: auto;
+    height: 100%;
+    width: 100%;
 
     border-radius: 10px;
 
@@ -49,7 +48,6 @@
 }
 
 .off{
-
     padding: .25em;
     
     width: auto;
@@ -81,6 +79,8 @@
 }
 
 .noOff{
+    white-space: nowrap;
+
     margin: 0;
     padding: 0;
 
@@ -109,6 +109,8 @@
     border-radius: 10px;
 
     p{
+        white-space: nowrap;
+        
         font-family: Rubik Medium;
         font-weight: 500;
     }
@@ -155,26 +157,80 @@
     animation-name: anim-fade-down;
     animation-duration: 1s;
 
+    margin-bottom: 3em;
+
     .game{
         @include flex(col, none, center, nowrap);
     
         margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
     
         padding: 0;
     
+        width: 98%;
         height: 90%;
-
-        margin-bottom: 3em;
 
         background: none;
 
-        @extend .anim-pop;
+        transition: .125s;
+
+        @media (hover: hover){
+            &:hover{
+                cursor: pointer;
+            
+                transform: scale(1.02);
+            
+                transition: .25s;
+            }
+        }
+        
+        &:active, &:focus{
+            cursor: pointer;
+        
+            transform: scale(1.02);
+        
+            transition: .25s;
+        }
+
         &:hover, &:active, &:focus{
             cursor: auto;
         }
     }
-    
-    
+
+    .carousel-indicators{
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 25%;
+
+        bottom: -3em;
+
+        button{
+            width: .5em;
+            height: .5em;
+
+            opacity: 1;
+
+            border: .175em solid white;
+            border-radius: 100%;
+            background-color: $color-bg-primary;
+        }
+
+        .carousel-control-prev, .carousel-control-next{
+            position: static;
+            width: 1.25em;
+            height: 2.825em;
+
+            border: none;
+            border-radius: none;
+            background: none;
+        }
+
+        .active{
+            background-color: $color-primary;
+        }
+    }
 
     .portrait{
         width: 100%;
@@ -204,22 +260,20 @@
 }
 
 .bestSellers{
-    margin-bottom: 3em;
-
+    
     animation-name: anim-fade-down;
     animation-duration: 1s;
 }
 
 .bestGames{
     @include flex(col, between, none, nowrap);
+    gap: 1em;
 
     margin-top: 1em;
-
-    height: 90%;
 }
 
 .split{
-    margin-bottom: 3em;
+    margin: 3em 0;
     
     border: 3px solid $color-bg-secondary;
     border-radius: 5px;

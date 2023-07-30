@@ -28,6 +28,8 @@
 }
 
 h1{
+    white-space: nowrap;
+
     margin: 0;
 
     font-size: map-get($font-size, xxl);

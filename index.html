@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="VIDEOJUEGOS, JUEGOS, VENTA, OFERTAS, GAMER, PC, COMPUTADORA">
     <meta name="description" content="Sitio web NO oficial de ZENITH, un portal de venta de juegos digitales diseñado especialmente por y para gamers.">
+    <meta name="theme-color" content="#101114">
     <title>Inicio - ZENITH</title>
 </head>
 <body>
@@ -33,7 +34,17 @@
                 </li>
                 <span class="col-1"></span> <!-- Espaciado -->
                 <li class="cart col-2"><a href="pages/carrito.html"><img src="res/icon/shop.png" alt="Icono Carrito"><p>Carrito</p></a></li> <!-- Carrito de Compras -->
-                <li class="profile col-2"><a href="pages/login.html"><img src="res/icon/profile.png" alt="Icono Perfil"><p>Perfil</p></a></li> <!-- Perfil de Usuario -->
+                <!-- Perfil de Usuario -->
+                <li class="dropdown col-2" data-bs-theme="dark">
+                    <div class="profile" data-bs-toggle="dropdown">
+                        <img src="res/icon/profile.png" alt="Icono Perfil">
+                        <p>Perfil</p>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="pages/login.html">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="pages/signup.html">Registrarse</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -41,23 +52,119 @@
     <!-- Contenido de la Página -->
     <main>
         <div class="container">
-            <section class="row d-flex flex-xl-row align-items-xl-start flex-lg-column justify-content-lg-between align-items-lg-center">
+            <section class="topSection row">
                 <!-- Sección de Destacados -->
                 <article class="featured col-xl-6 col-lg-9">
                     <h1>Destacados</h1>
-                    <div class="game container-fluid">
-                        <!-- Portada de Juego -->
-                        <a class="row m-0" href="pages/juego.html"><img class="portrait col-12" src="res/img/gta.jpg" alt="Portada de Grand Theft Auto V"></a>
-                        <div class="info row">
-                            <!-- Título del Juego -->
-                            <h3 class="col-5">Grand Theft Auto V</h3>
-                            <!-- Precio -->
-                            <p class="noOff col-3">50 US$</p>
-                            <div class="priceBox col-4">
-                                <p>25 US$</p>
-                                <a class="addButton" href="pages/carrito.html">
-                                    <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
-                                </a>
+                    <!-- Carrusel/Slider de Elementos -->
+                    <div id="carouselFeatured" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Botones del Slider -->
+                        <div class="carousel-indicators">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeatured" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="0" class="active"</button>
+                            <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="4"></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFeatured" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Contenido dentro del Slider -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="game container-fluid">
+                                    <!-- Portada de Juego -->
+                                    <a class="row m-0" href="pages/games/gta.html"><img class="portrait col-12" src="res/img/gta.jpg" alt="Portada de Grand Theft Auto V"></a>
+                                    <div class="info row">
+                                        <!-- Título del Juego -->
+                                        <h3 class="col-5">Grand Theft Auto V</h3>
+                                        <!-- Precio -->
+                                        <p class="noOff col-3">50 US$</p>
+                                        <div class="priceBox col-4">
+                                            <p>25 US$</p>
+                                            <a class="addButton" href="pages/carrito.html">
+                                                <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="game container-fluid">
+                                    <!-- Portada de Juego -->
+                                    <a class="row m-0" href="pages/games/cod.html"><img class="portrait col-12" src="res/img/cod.jpg" alt="Portada de Call of Duty Modern Warfare II"></a>
+                                    <div class="info row">
+                                        <!-- Título del Juego -->
+                                        <h3 class="col-5">Call of Duty Modern Warfare II</h3>
+                                        <!-- Precio -->
+                                        <p class="noOff col-3">70 US$</p>
+                                        <div class="priceBox col-4">
+                                            <p>42 US$</p>
+                                            <a class="addButton" href="pages/carrito.html">
+                                                <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="game container-fluid">
+                                    <!-- Portada de Juego -->
+                                    <a class="row m-0" href="pages/games/dead-island.html"><img class="portrait col-12" src="res/img/dead-island.jpg" alt="Portada de Dead Island 2"></a>
+                                    <div class="info row">
+                                        <!-- Título del Juego -->
+                                        <h3 class="col-5">Dead Island 2</h3>
+                                        <!-- Precio -->
+                                        <span class="col-2"></span>
+                                        <div class="priceBox col-5">
+                                            <p>45 US$</p>
+                                            <a class="addButton" href="pages/carrito.html">
+                                                <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="game container-fluid">
+                                    <!-- Portada de Juego -->
+                                    <a class="row m-0" href="pages/games/battlefield.html"><img class="portrait col-12" src="res/img/battlefield.jpg" alt="Portada de Battlefield 2042"></a>
+                                    <div class="info row">
+                                        <!-- Título del Juego -->
+                                        <h3 class="col-5">Battlefield 2042</h3>
+                                        <!-- Precio -->
+                                        <p class="noOff col-3">60 US$</p>
+                                        <div class="priceBox col-4">
+                                            <p>18 US$</p>
+                                            <a class="addButton" href="pages/carrito.html">
+                                                <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="game container-fluid">
+                                    <!-- Portada de Juego -->
+                                    <a class="row m-0" href="pages/games/hogwarts.html"><img class="portrait col-12" src="res/img/hogwarts.jpg" alt="Portada de Hogwarts Legacy"></a>
+                                    <div class="info row">
+                                        <!-- Título del Juego -->
+                                        <h3 class="col-5">Hogwarts Legacy</h3>
+                                        <!-- Precio -->
+                                        <span class="col-2"></span>
+                                        <div class="priceBox col-5">
+                                            <p>50 US$</p>
+                                            <a class="addButton" href="pages/carrito.html">
+                                                <img src="res/icon/cartAdd.png" alt="Icono Añadir al Carrito">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,7 +175,7 @@
                     <section class="bestGames">
                         <article class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/cyber.jpg" alt="Portada de Cyberpunk 2077">
+                            <a class="col-4" href="pages/games/cyberpunk.html"><img class="portrait" src="res/img/cyberpunk.jpg" alt="Portada de Cyberpunk 2077"></a>
                             <div class="info col-8">
                                 <!-- Título del Juego -->
                                 <h3>Cyberpunk 2077</h3>
@@ -88,7 +195,7 @@
                         </article>
                         <article class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/redead.jpg" alt="Portada de Red Dead Redemption 2">
+                            <a class="col-4" href="pages/games/redead.html"><img class="portrait" src="res/img/redead.jpg" alt="Portada de Red Dead Redemption 2"></a>
                             <div class="info col-8">
                                 <!-- Título del Juego -->
                                 <h3>Red Dead Redemption 2</h3>
@@ -108,7 +215,7 @@
                         </article>
                         <article class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/fifa.jpg" alt="Portada de FIFA 23">
+                            <a class="col-4" href="pages/games/fifa.html"><img class="portrait" src="res/img/fifa.jpg" alt="Portada de FIFA 23"></a>
                             <div class="info col-8">
                                 <!-- Título del Juego -->
                                 <h3>FIFA 23</h3>
@@ -137,7 +244,7 @@
                     <div class="gameList">
                         <div class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/streetfi.jpg" alt="Portada de Street Fighter 6">
+                            <a class="col-4" href="pages/games/street-f.html"><img class="portrait" src="res/img/street-f.jpg" alt="Portada de Street Fighter 6"></a>
                             <div class="info col-8 container-fluid">
                                 <!-- Cabecera del Juego -->
                                 <div class="row">
@@ -166,7 +273,7 @@
                         </div>
                         <div class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/elder.jpg" alt="Portada de The Elder Scrolls Online">
+                            <a class="col-4" href="pages/games/elder.html"><img class="portrait" src="res/img/elder.jpg" alt="Portada de The Elder Scrolls Online"></a>
                             <div class="info col-8 container-fluid">
                                 <!-- Cabecera del Juego -->
                                 <div class="row">
@@ -196,7 +303,7 @@
                         </div>
                         <div class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/watch.jpg" alt="Portada de Watch Dogs 2">
+                            <a class="col-4" href="pages/games/watch.html"><img class="portrait" src="res/img/watch.jpg" alt="Portada de Watch Dogs 2"></a>
                             <div class="info col-8 container-fluid">
                                 <!-- Cabecera del Juego -->
                                 <div class="row">
@@ -225,7 +332,7 @@
                         </div>
                         <div class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/outlast.jpg" alt="Portada de Outlast">
+                            <a class="col-4" href="pages/games/outlast.html"><img class="portrait" src="res/img/outlast.jpg" alt="Portada de Outlast"></a>
                             <div class="info col-8 container-fluid">
                                 <!-- Cabecera del Juego -->
                                 <div class="row">
@@ -256,7 +363,7 @@
                         </div>
                         <div class="game container">
                             <!-- Portada de Juego -->
-                            <img class="portrait col-4" src="res/img/dying.jpg" alt="Portada de Dying Light 2">
+                            <a class="col-4" href="pages/games/dying.html"><img class="portrait" src="res/img/dying.jpg" alt="Portada de Dying Light 2"></a>
                             <div class="info col-8 container-fluid">
                                 <!-- Cabecera del Juego -->
                                 <div class="row">

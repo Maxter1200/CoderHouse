@@ -14,6 +14,7 @@
     <meta name="keywords" content="VIDEOJUEGOS, JUEGOS, COMPRAR, LISTA, CARRITO, CARRO, PRECIO">
     <meta name="description" content="Carro de compra donde encontrarás los artículos que hayas agregado a tu lista de compra.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101114">
     <title>Carrito - ZENITH</title>
 </head>
 <body>
@@ -33,7 +34,17 @@
                 </li>
                 <span class="col-1"></span> <!-- Espaciado -->
                 <li class="cart col-2"><a href="carrito.html"><img src="../res/icon/shop.png" alt="Icono Carrito"><p>Carrito</p></a></li> <!-- Carrito de Compras -->
-                <li class="profile col-2"><a href="login.html"><img src="../res/icon/profile.png" alt="Icono Perfil"><p>Perfil</p></a></li> <!-- Perfil de Usuario -->
+                <!-- Perfil de Usuario -->
+                <li class="dropdown col-2" data-bs-theme="dark">
+                    <div class="profile" data-bs-toggle="dropdown">
+                        <img src="../res/icon/profile.png" alt="Icono Perfil">
+                        <p>Perfil</p>
+                    </div>
+                    <ul class="dropdown-menu" style="min-width: 0;">
+                        <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="signup.html">Registrarse</a></li>
+                    </ul>
+                </li> 
             </ul>
         </nav>
     </header>
@@ -49,7 +60,7 @@
                     <!-- Juegos agregados al Carrito -->
                     <div class="cartGames">
                         <div class="game container">
-                            <img class="portrait col-3" src="../res/img/gta.jpg" alt="Portada de Grand Theft Auto 5">
+                            <a class="col-3" href="games/gta.html"><img class="portrait" src="../res/img/gta.jpg" alt="Portada de Grand Theft Auto 5"></a>
                             <div class="info col-8 container">
                                 <!-- Título del Juego -->
                                 <h3 class="row">Grand Theft Auto V</h3>
@@ -64,7 +75,7 @@
                             </div>
                         </div>
                         <div class="game container">
-                            <img class="portrait col-3" src="../res/img/streetfi.jpg" alt="Portada de Street Fighter 6">
+                            <a class="col-3" href="games/street-f.html"><img class="portrait" src="../res/img/street-f.jpg" alt="Portada de Street Fighter 6"></a>
                             <div class="info col-8 container">
                                 <!-- Título del Juego -->
                                 <h3 class="row">Street Fighter 6</h3>
@@ -82,7 +93,7 @@
                     <!-- Precio Total a Pagar -->
                     <div class="total">
                         <h2>Total</h2>
-                        <h2>120 US$</h2>
+                        <h2>90 US$</h2>
                     </div>
                     <!-- Compra -->
                     <div class="buy">
