@@ -19,6 +19,7 @@
         a{
             padding: .5em .75em;
 
+            font-size: map-get($font-size, m);
             color: $color-white;
 
             &:hover, &:focus{
@@ -36,6 +37,44 @@
     height: 3.125em;
 
     @extend .anim-pop;
+
+    &:hover{
+        .home{
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.tooltipHover{
+    position: relative;
+    .tooltipText{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    
+        top: 200%;
+        left: 40%;
+    
+        width: auto;
+    
+        padding: .75em 1.25em;
+    
+        background-color: $color-bg-secondary;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 0px;
+
+        transition: .25s;
+    }
+
+    &:hover, &:focus{
+        .tooltipText{
+            visibility: visible;
+            opacity: 1;
+
+            transition: .125s;
+        }
+    }
 }
 
 .search{
@@ -159,6 +198,12 @@
 @media (max-width: 992px) {
     .logo{
         content: url("../res/icon/icon_2.png");
+    }
+
+    .tooltipHover{
+        .tooltipText{
+            left: 0;
+        }
     }
     
     .searchBox::placeholder{
